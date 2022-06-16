@@ -108,3 +108,5 @@ venv.bak/
 
 # VScode
 .vscode/
+# Binary files
+*.pickle
