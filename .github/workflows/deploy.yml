@@ -27,7 +27,7 @@ jobs:
         with:
             miniforge-variant: Mambaforge
             miniforge-version: latest
-            auto-activate-base: false
+            auto-activate-base: true
             activate-environment: ""
             use-mamba: true
 
@@ -38,8 +38,9 @@ jobs:
 
       - name: Setup Tardis
         run: |
+          conda init bash
           cd tardis/
-          activate tardis
+          conda activate tardis
           python setup.py develop
 
       - name: Install Sphinx Gallery
