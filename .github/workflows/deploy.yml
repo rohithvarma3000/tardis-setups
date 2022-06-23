@@ -14,6 +14,7 @@ jobs:
       - run: pwd
       - run: ls
       - uses: actions/checkout@v3
+        path: main
 
       - run: |
           pwd
@@ -27,6 +28,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: tardis-sn/tardis
+          path: tardis
 
       - run: |
           pwd
