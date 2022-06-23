@@ -27,16 +27,13 @@ jobs:
         with:
             miniforge-variant: Mambaforge
             miniforge-version: latest
-            auto-activate-base: true
-            activate-environment: ""
+            activate-environment: tardis
             use-mamba: true
-
-      - run: conda init bash
 
       - name: Create the environment
         run: |
           cd tardis/
-          mamba create --name tardis --file conda-linux-64.lock
+          mamba update --name tardis --file conda-linux-64.lock
 
       - name: Setup Tardis
         run: |
