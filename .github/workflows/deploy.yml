@@ -14,7 +14,8 @@ jobs:
       - run: pwd
       - run: ls
       - uses: actions/checkout@v3
-        path: main
+        with:
+          path: main
 
       - run: |
           pwd
