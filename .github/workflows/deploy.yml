@@ -20,6 +20,5 @@ jobs:
           repository: tardis-sn/tardis
 
       - run: |
-          cd ..
           pwd
           ls
