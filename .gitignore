@@ -113,3 +113,9 @@ venv.bak/
 
 # Sphinx HTML Output
 html/
+
+# Sphinx Gallery output
+docs/2014_examples/
+
+# VScode
+.vscode/
