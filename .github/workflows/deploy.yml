@@ -31,6 +31,8 @@ jobs:
             activate-environment: ""
             use-mamba: true
 
+      - run: conda init bash
+
       - name: Create the environment
         run: |
           cd tardis/
@@ -38,7 +40,6 @@ jobs:
 
       - name: Setup Tardis
         run: |
-          conda init bash
           cd tardis/
           conda activate tardis
           python setup.py develop
