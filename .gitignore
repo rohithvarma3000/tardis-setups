@@ -110,3 +110,6 @@ venv.bak/
 .vscode/
 # Binary files
 *.pickle
+
+# Sphinx HTML Output
+html/
