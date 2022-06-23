@@ -11,26 +11,52 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - run: pwd
-      - run: ls
-      - uses: actions/checkout@v3
+      - name: Setup the tardis-setups repository
+        uses: actions/checkout@v3
         with:
-          path: main
+          path: setups
 
-      - run: |
-          pwd
-          ls
-      
-      - run: |
-          cd ..
-          mkdir tardis/
-          cd tardis/
-
-      - uses: actions/checkout@v3
+      - name: Setup the tardis repository
+        uses: actions/checkout@v3
         with:
           repository: tardis-sn/tardis
           path: tardis
 
-      - run: |
-          pwd
+      - name: Setup environment
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+            miniforge-variant: Mambaforge
+            miniforge-version: latest
+            auto-activate-base: true
+            activate-environment: ""
+            use-mamba: true
+
+      - name: Create the environment
+        run: |
+          cd tardis/
+          mamba create --name tardis --file conda-linux-64.lock
+
+      - name: Setup Tardis
+        run: |
+          cd tardis/
+          conda activate tardis
+          python setup.py develop
+
+      - name: Install Sphinx Gallery
+        run: |
+          conda activate tardis
+          mamba install sphinx-gallery
+
+      - name: Create the documentation
+        run: |
+          conda activate tardis
+          cd setups/
+          sphinx-build -b html docs/ html/
+
+      - name: Testing
+        run: |
+          cd setups/
           ls
+          cd html/
+          ls
+
