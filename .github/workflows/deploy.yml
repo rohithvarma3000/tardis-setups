@@ -1,6 +1,8 @@
 name: Deploy tardis-setups documentation
 
-on: push
+on: 
+  push:
+  
 
 jobs:
 
