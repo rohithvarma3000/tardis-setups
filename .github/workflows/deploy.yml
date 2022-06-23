@@ -39,7 +39,7 @@ jobs:
       - name: Setup Tardis
         run: |
           cd tardis/
-          conda activate tardis
+          activate tardis
           python setup.py develop
 
       - name: Install Sphinx Gallery
