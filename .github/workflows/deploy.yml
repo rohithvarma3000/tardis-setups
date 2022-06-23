@@ -38,17 +38,14 @@ jobs:
       - name: Setup Tardis
         run: |
           cd tardis/
-          conda activate tardis
           python setup.py develop
 
       - name: Install Sphinx Gallery
         run: |
-          conda activate tardis
           mamba install sphinx-gallery
 
       - name: Create the documentation
         run: |
-          conda activate tardis
           cd setups/
           sphinx-build -b html docs/ html/
 
