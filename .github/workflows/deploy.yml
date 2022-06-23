@@ -38,7 +38,7 @@ jobs:
       - name: Setup Tardis
         run: |
           cd tardis/
-          python setup.py develop
+          python setup.py develop --user
 
       - name: Install Sphinx Gallery
         run: |
