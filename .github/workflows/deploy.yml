@@ -15,6 +15,15 @@ jobs:
       - run: ls
       - uses: actions/checkout@v3
 
+      - run: |
+          pwd
+          ls
+      
+      - run: |
+          cd ..
+          mkdir tardis/
+          cd tardis/
+
       - uses: actions/checkout@v3
         with:
           repository: tardis-sn/tardis
