@@ -39,10 +39,12 @@ jobs:
       - name: Setup Tardis
         run: |
           cd tardis/
+          source /usr/share/miniconda3/envs/tardis/bin/activate
           python setup.py develop --user
 
       - name: Install Sphinx Gallery
         run: |
+          source /usr/share/miniconda3/envs/tardis/bin/activate
           mamba install sphinx-gallery
 
       - name: Create the documentation
@@ -50,7 +52,8 @@ jobs:
           cd setups/
           mamba list
           mamba env list
-          python -m sphinx-build -b html docs/ html/
+          source /usr/share/miniconda3/envs/tardis/bin/activate
+          sphinx-build -b html docs/ html/
 
       - name: Testing
         run: |
