@@ -49,7 +49,7 @@ jobs:
           cd setups/
           mamba list
           mamba env list
-          sphinx build -b html docs/ html/
+          python -m sphinx-build -b html docs/ html/
 
       - name: Testing
         run: |
