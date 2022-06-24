@@ -28,6 +28,7 @@ jobs:
             miniforge-variant: Mambaforge
             miniforge-version: latest
             activate-environment: tardis
+            auto-activate-base: false
             use-mamba: true
 
       - name: Create the environment
