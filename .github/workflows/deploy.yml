@@ -1,11 +1,13 @@
-name: Deploy tardis-setups documentation
+name: deploy
 
 on: 
   push:
-  
+
+defaults:
+  run:
+    shell: bash -l {0}
 
 jobs:
-
   build:
     name: Build docs
     runs-on: ubuntu-latest
@@ -39,20 +41,17 @@ jobs:
       - name: Setup Tardis
         run: |
           cd tardis/
-          source /usr/share/miniconda3/envs/tardis/bin/activate
-          python setup.py develop --user
+          pip install -e .
 
       - name: Install Sphinx Gallery
         run: |
-          source /usr/share/miniconda3/envs/tardis/bin/activate
-          mamba install sphinx-gallery
+          mamba install -n tardis sphinx-gallery
 
       - name: Create the documentation
         run: |
           cd setups/
           mamba list
           mamba env list
-          source /usr/share/miniconda3/envs/tardis/bin/activate
           sphinx-build -b html docs/ html/
 
       - name: Testing
@@ -61,4 +60,3 @@ jobs:
           ls
           cd html/
           ls
-
