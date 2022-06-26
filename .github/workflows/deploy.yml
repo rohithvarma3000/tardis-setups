@@ -2,6 +2,7 @@ name: deploy
 
 on: 
   push:
+    branches: [master,test-flow]
 
 defaults:
   run:
@@ -54,9 +55,10 @@ jobs:
           mamba env list
           sphinx-build -b html docs/ html/
 
-      - name: Testing
-        run: |
-          cd setups/
-          ls
-          cd html/
-          ls
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./setups/html
+          publish_branch: gh-pages
+          destination_dir: testing/
