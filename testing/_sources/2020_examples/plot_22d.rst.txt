@@ -18,10 +18,10 @@
 .. _sphx_glr_2020_examples_plot_22d.py:
 
 
-Tardis 2020 Example
+Tardis 2020 Example 22d
 ==========================
 
-This is the example output 16d
+This is the example output 22d
 
 .. GENERATED FROM PYTHON SOURCE LINES 7-19
 
@@ -136,7 +136,7 @@ Runs the example
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 11 minutes  48.756 seconds)
+   **Total running time of the script:** ( 8 minutes  37.642 seconds)
 
 
 .. _sphx_glr_download_2020_examples_plot_22d.py:

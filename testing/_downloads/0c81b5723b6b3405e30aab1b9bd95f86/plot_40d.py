@@ -1,8 +1,8 @@
 """
-Tardis 2020 Example 22d
+Tardis 2020 Example 40d
 ==========================
 
-This is the example output 22d
+This is the example output 40d
 """
 
 
@@ -26,7 +26,7 @@ download_atom_data("kurucz_cd23_chianti_H_He")
 # Runs the example
 
 conf = Configuration.from_yaml(
-    "../../2020/2020_williamson_94I/code_comp_setups/22d.yml"
+    "../../2020/2020_williamson_94I/code_comp_setups/40d.yml"
 )
 conf = config_modifier(conf)
 # %%
@@ -35,13 +35,13 @@ sim = run_tardis(conf)
 
 spectrum = sim.runner.spectrum
 spectrum_virtual = sim.runner.spectrum_virtual
-spectrum_integrated = sim.runner.spectrum_integrated
+# spectrum_integrated = sim.runner.spectrum_integrated
 
 plt.figure(figsize=(10, 6.5))
 
 spectrum.plot(label="Normal packets")
 spectrum_virtual.plot(label="Virtual packets")
-spectrum_integrated.plot(label="Formal integral")
+# spectrum_integrated.plot(label="Formal integral")
 
 plt.xlim(500, 9000)
 plt.title("TARDIS example model spectrum")

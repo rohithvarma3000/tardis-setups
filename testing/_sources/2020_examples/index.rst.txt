@@ -18,7 +18,7 @@ Below is a gallery of examples.
 .. only:: html
 
  .. figure:: /2020_examples/images/thumb/sphx_glr_plot_16d_thumb.png
-     :alt: Tardis 2020 Example
+     :alt: Tardis 2020 Example 16d
 
      :ref:`sphx_glr_2020_examples_plot_16d.py`
 
@@ -34,12 +34,12 @@ Below is a gallery of examples.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is the example output 16d">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is the example output 22d">
 
 .. only:: html
 
  .. figure:: /2020_examples/images/thumb/sphx_glr_plot_22d_thumb.png
-     :alt: Tardis 2020 Example
+     :alt: Tardis 2020 Example 22d
 
      :ref:`sphx_glr_2020_examples_plot_22d.py`
 
@@ -60,7 +60,7 @@ Below is a gallery of examples.
 .. only:: html
 
  .. figure:: /2020_examples/images/thumb/sphx_glr_plot_30d_thumb.png
-     :alt: Tardis 2020 Example
+     :alt: Tardis 2020 Example 30d
 
      :ref:`sphx_glr_2020_examples_plot_30d.py`
 
@@ -73,6 +73,27 @@ Below is a gallery of examples.
    :hidden:
 
    /2020_examples/plot_30d
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is the example output 40d">
+
+.. only:: html
+
+ .. figure:: /2020_examples/images/thumb/sphx_glr_plot_40d_thumb.png
+     :alt: Tardis 2020 Example 40d
+
+     :ref:`sphx_glr_2020_examples_plot_40d.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /2020_examples/plot_40d
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
