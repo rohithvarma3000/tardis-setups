@@ -51,8 +51,6 @@ jobs:
       - name: Create the documentation
         run: |
           cd setups/
-          mamba list
-          mamba env list
           sphinx-build -b html docs/ html/
 
       - name: Deploy
