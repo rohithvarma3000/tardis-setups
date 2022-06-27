@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**03:12.295** total execution time for **2014_examples** files:
+**02:45.057** total execution time for **2014_examples** files:
 
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_2014_examples_plot_tardis_example.py` (``plot_tardis_example.py``) | 03:12.295 | 0.0 MB |
+| :ref:`sphx_glr_2014_examples_plot_tardis_example.py` (``plot_tardis_example.py``) | 02:45.057 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+

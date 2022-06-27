@@ -86,7 +86,11 @@ to download the full example code</p>
 <span class="kn">from</span> <span class="nn">tardis.io.config_reader</span> <span class="kn">import</span> <span class="n">Configuration</span>
 <span class="kn">from</span> <span class="nn">tardis.io.atom_data.util</span> <span class="kn">import</span> <span class="n">download_atom_data</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;../&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">setup_utils</span> <span class="kn">import</span> <span class="n">config_modifier</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -118,40 +122,21 @@ ASSUMING DEFAULT DATA DIRECTORY /home/runner/Downloads/tardis-data
 </pre></div>
 </div>
 <p>Runs the example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_file</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">filename</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">config_modifier</span><span class="p">(</span><span class="n">conf</span><span class="p">):</span>
-    <span class="n">conf</span><span class="p">[</span><span class="s2">&quot;montecarlo&quot;</span><span class="p">][</span><span class="s2">&quot;nthreads&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">conf</span><span class="p">[</span><span class="s2">&quot;montecarlo&quot;</span><span class="p">][</span><span class="s2">&quot;last_no_of_packets&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0e5</span>
-    <span class="n">conf</span><span class="p">[</span><span class="s2">&quot;montecarlo&quot;</span><span class="p">][</span><span class="s2">&quot;no_of_virtual_packets&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
-
-    <span class="c1"># conf[&quot;atom_data&quot;] = os.path.join(</span>
-    <span class="c1">#     os.path.expanduser(&quot;~&quot;), &quot;Downloads&quot;, &quot;tardis-data&quot;, conf[&quot;atom_data&quot;]</span>
-    <span class="c1"># )</span>
-    <span class="n">conf</span><span class="p">[</span><span class="s2">&quot;atom_data&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">find_file</span><span class="p">(</span><span class="n">conf</span><span class="p">[</span><span class="s2">&quot;atom_data&quot;</span><span class="p">],</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">conf</span>
-
-
-<span class="n">conf</span> <span class="o">=</span> <span class="n">Configuration</span><span class="o">.</span><span class="n">from_yaml</span><span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conf</span> <span class="o">=</span> <span class="n">Configuration</span><span class="o">.</span><span class="n">from_yaml</span><span class="p">(</span>
     <span class="s2">&quot;../../2014/2014_kerzendorf_sim/appendix_A1/tardis_example.yml&quot;</span>
 <span class="p">)</span>
-<span class="n">modified_conf</span> <span class="o">=</span> <span class="n">config_modifier</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span>
+<span class="n">conf</span> <span class="o">=</span> <span class="n">config_modifier</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sim</span> <span class="o">=</span> <span class="n">run_tardis</span><span class="p">(</span><span class="n">modified_conf</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sim</span> <span class="o">=</span> <span class="n">run_tardis</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[tardis.plasma.standard_plasmas][INFO   ]
 
-        Reading Atomic Data from /home/runner/work/tardis-setups/tardis-setups/setups/2020/2020_williamson_94I/code_comp_setups/kurucz_cd23_chianti_H_He.h5 (standard_plasmas.py:93)
+        Reading Atomic Data from /home/runner/Downloads/tardis-data/kurucz_cd23_chianti_H_He.h5 (standard_plasmas.py:93)
 INFO:tardis.plasma.standard_plasmas:
-        Reading Atomic Data from /home/runner/work/tardis-setups/tardis-setups/setups/2020/2020_williamson_94I/code_comp_setups/kurucz_cd23_chianti_H_He.h5
+        Reading Atomic Data from /home/runner/Downloads/tardis-data/kurucz_cd23_chianti_H_He.h5
 [tardis.io.atom_data.base][INFO   ]
         Reading Atom Data with: UUID = 6f7b09e887a311e7a06b246e96350010 MD5  = 864f1753714343c41f99cb065710cace  (base.py:249)
 INFO:tardis.io.atom_data.base:Reading Atom Data with: UUID = 6f7b09e887a311e7a06b246e96350010 MD5  = 864f1753714343c41f99cb065710cace
@@ -184,14 +169,18 @@ Packets:                                                                        
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   ################7                                                               8362/40000 [00:00&lt;00:00, 83612.31it/s]
+Packets:   #########6                                                                      4826/40000 [00:00&lt;00:00, 48246.47it/s]
 
-Packets:   ##################################2                                             17138/40000 [00:00&lt;00:00, 86049.06it/s]
+Packets:   #####################6                                                          10838/40000 [00:00&lt;00:00, 55227.10it/s]
 
-Packets:   ###################################################8                            25934/40000 [00:00&lt;00:00, 86920.32it/s]
+Packets:   #################################7                                              16852/40000 [00:00&lt;00:00, 57469.82it/s]
 
-Packets:   #####################################################################4          34749/40000 [00:00&lt;00:00, 87403.50it/s]
-Iterations:####                                                                            1/20 [00:00&lt;00:09,  2.01it/s][tardis.simulation.base][INFO   ]
+Packets:   #############################################9                                  22964/40000 [00:00&lt;00:00, 58908.70it/s]
+
+Packets:   #########################################################8                      28908/40000 [00:00&lt;00:00, 59098.93it/s]
+
+Packets:   ######################################################################4         35244/40000 [00:00&lt;00:00, 60546.75it/s]
+Iterations:####                                                                            1/20 [00:00&lt;00:13,  1.37it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 7.942e+42 erg / s
         Luminosity absorbed  = 2.659e+42 erg / s
@@ -247,14 +236,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################6                                                              8833/40000 [00:00&lt;00:00, 88328.61it/s]
+Packets:   ############3                                                                   6167/40000 [00:00&lt;00:00, 61661.24it/s]
 
-Packets:   ###################################4                                            17727/40000 [00:00&lt;00:00, 88687.68it/s]
+Packets:   ########################7                                                       12388/40000 [00:00&lt;00:00, 61977.28it/s]
 
-Packets:   #####################################################3                          26675/40000 [00:00&lt;00:00, 89048.73it/s]
+Packets:   #####################################2                                          18623/40000 [00:00&lt;00:00, 62146.13it/s]
 
-Packets:   #######################################################################1        35580/40000 [00:00&lt;00:00, 88832.54it/s]
-Iterations:########                                                                        2/20 [00:01&lt;00:10,  1.72it/s][tardis.simulation.base][INFO   ]
+Packets:   #################################################6                              24838/40000 [00:00&lt;00:00, 61674.48it/s]
+
+Packets:   ##############################################################                  31006/40000 [00:00&lt;00:00, 60644.74it/s]
+
+Packets:   ##########################################################################7     37375/40000 [00:00&lt;00:00, 61664.41it/s]
+Iterations:########                                                                        2/20 [00:01&lt;00:14,  1.20it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 1.405e+43 erg / s
         Luminosity absorbed  = 4.798e+42 erg / s
@@ -310,14 +303,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################7                                                              8884/40000 [00:00&lt;00:00, 86607.33it/s]
+Packets:   ############3                                                                   6170/40000 [00:00&lt;00:00, 60752.20it/s]
 
-Packets:   ###################################3                                            17678/40000 [00:00&lt;00:00, 87380.04it/s]
+Packets:   ########################6                                                       12348/40000 [00:00&lt;00:00, 61349.03it/s]
 
-Packets:   ####################################################9                           26461/40000 [00:00&lt;00:00, 87580.47it/s]
+Packets:   ####################################9                                           18492/40000 [00:00&lt;00:00, 61390.18it/s]
 
-Packets:   ######################################################################4         35222/40000 [00:00&lt;00:00, 87591.71it/s]
-Iterations:############                                                                    3/20 [00:01&lt;00:10,  1.64it/s][tardis.simulation.base][INFO   ]
+Packets:   #################################################4                              24717/40000 [00:00&lt;00:00, 61723.88it/s]
+
+Packets:   #############################################################7                  30890/40000 [00:00&lt;00:00, 61492.65it/s]
+
+Packets:   ##########################################################################      37040/40000 [00:00&lt;00:00, 60990.48it/s]
+Iterations:############                                                                    3/20 [00:02&lt;00:14,  1.16it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 8.168e+42 erg / s
         Luminosity absorbed  = 2.550e+42 erg / s
@@ -373,14 +370,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################5                                                              8776/40000 [00:00&lt;00:00, 87754.02it/s]
+Packets:   ############2                                                                   6115/40000 [00:00&lt;00:00, 61140.44it/s]
 
-Packets:   ###################################3                                            17658/40000 [00:00&lt;00:00, 88375.02it/s]
+Packets:   ########################5                                                       12251/40000 [00:00&lt;00:00, 61265.32it/s]
 
-Packets:   #####################################################                           26526/40000 [00:00&lt;00:00, 88513.93it/s]
+Packets:   #####################################                                           18501/40000 [00:00&lt;00:00, 61827.14it/s]
 
-Packets:   ######################################################################7         35378/40000 [00:00&lt;00:00, 88444.10it/s]
-Iterations:################                                                                4/20 [00:02&lt;00:09,  1.61it/s][tardis.simulation.base][INFO   ]
+Packets:   #################################################4                              24700/40000 [00:00&lt;00:00, 61890.87it/s]
+
+Packets:   #############################################################9                  30983/40000 [00:00&lt;00:00, 62226.11it/s]
+
+Packets:   ##########################################################################4     37206/40000 [00:00&lt;00:00, 60976.39it/s]
+Iterations:################                                                                4/20 [00:03&lt;00:13,  1.14it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 1.356e+43 erg / s
         Luminosity absorbed  = 4.460e+42 erg / s
@@ -436,14 +437,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################6                                                              8845/40000 [00:00&lt;00:00, 88113.96it/s]
+Packets:   ############2                                                                   6103/40000 [00:00&lt;00:00, 60261.54it/s]
 
-Packets:   ###################################5                                            17760/40000 [00:00&lt;00:00, 88722.36it/s]
+Packets:   ########################4                                                       12204/40000 [00:00&lt;00:00, 60694.38it/s]
 
-Packets:   #####################################################3                          26669/40000 [00:00&lt;00:00, 88885.88it/s]
+Packets:   ####################################6                                           18317/40000 [00:00&lt;00:00, 60891.55it/s]
 
-Packets:   #######################################################################1        35581/40000 [00:00&lt;00:00, 88977.70it/s]
-Iterations:####################                                                            5/20 [00:03&lt;00:09,  1.60it/s][tardis.simulation.base][INFO   ]
+Packets:   ################################################8                               24407/40000 [00:00&lt;00:00, 60753.57it/s]
+
+Packets:   ############################################################9                   30483/40000 [00:00&lt;00:00, 59835.36it/s]
+
+Packets:   ########################################################################9       36489/40000 [00:00&lt;00:00, 59895.70it/s]
+Iterations:####################                                                            5/20 [00:04&lt;00:13,  1.13it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 8.318e+42 erg / s
         Luminosity absorbed  = 2.681e+42 erg / s
@@ -499,14 +504,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################7                                                              8898/40000 [00:00&lt;00:00, 88720.12it/s]
+Packets:   ############3                                                                   6183/40000 [00:00&lt;00:00, 61821.51it/s]
 
-Packets:   ###################################5                                            17787/40000 [00:00&lt;00:00, 88818.86it/s]
+Packets:   ########################7                                                       12366/40000 [00:00&lt;00:00, 60075.75it/s]
 
-Packets:   #####################################################4                          26743/40000 [00:00&lt;00:00, 89156.90it/s]
+Packets:   #####################################                                           18502/40000 [00:00&lt;00:00, 60647.90it/s]
 
-Packets:   #######################################################################5        35754/40000 [00:00&lt;00:00, 89531.20it/s]
-Iterations:########################                                                        6/20 [00:03&lt;00:08,  1.60it/s][tardis.simulation.base][INFO   ]
+Packets:   #################################################3                              24650/40000 [00:00&lt;00:00, 60970.44it/s]
+
+Packets:   #############################################################5                  30750/40000 [00:00&lt;00:00, 60339.78it/s]
+
+Packets:   #########################################################################7      36895/40000 [00:00&lt;00:00, 60710.97it/s]
+Iterations:########################                                                        6/20 [00:05&lt;00:12,  1.12it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 1.343e+43 erg / s
         Luminosity absorbed  = 4.402e+42 erg / s
@@ -562,14 +571,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################9                                                              8954/40000 [00:00&lt;00:00, 86032.96it/s]
+Packets:   ############1                                                                   6073/40000 [00:00&lt;00:00, 59063.75it/s]
 
-Packets:   ###################################4                                            17705/40000 [00:00&lt;00:00, 86885.36it/s]
+Packets:   ########################1                                                       12066/40000 [00:00&lt;00:00, 59567.16it/s]
 
-Packets:   ####################################################8                           26421/40000 [00:00&lt;00:00, 87007.79it/s]
+Packets:   ####################################2                                           18143/40000 [00:00&lt;00:00, 60110.90it/s]
 
-Packets:   ######################################################################2         35143/40000 [00:00&lt;00:00, 87088.69it/s]
-Iterations:############################                                                    7/20 [00:04&lt;00:08,  1.58it/s][tardis.simulation.base][INFO   ]
+Packets:   ################################################6                               24301/40000 [00:00&lt;00:00, 60687.66it/s]
+
+Packets:   ############################################################7                   30386/40000 [00:00&lt;00:00, 60744.57it/s]
+
+Packets:   ########################################################################9       36461/40000 [00:00&lt;00:00, 60715.33it/s]
+Iterations:############################                                                    7/20 [00:06&lt;00:11,  1.12it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 8.399e+42 erg / s
         Luminosity absorbed  = 2.700e+42 erg / s
@@ -625,14 +638,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################6                                                              8829/40000 [00:00&lt;00:00, 88282.51it/s]
+Packets:   ############1                                                                   6072/40000 [00:00&lt;00:00, 60714.27it/s]
 
-Packets:   ###################################6                                            17840/40000 [00:00&lt;00:00, 89356.89it/s]
+Packets:   ########################2                                                       12144/40000 [00:00&lt;00:00, 60613.97it/s]
 
-Packets:   #####################################################6                          26807/40000 [00:00&lt;00:00, 89499.12it/s]
+Packets:   ####################################7                                           18357/40000 [00:00&lt;00:00, 61302.72it/s]
 
-Packets:   #######################################################################6        35836/40000 [00:00&lt;00:00, 89810.95it/s]
-Iterations:################################                                                8/20 [00:04&lt;00:07,  1.59it/s][tardis.simulation.base][INFO   ]
+Packets:   ################################################9                               24488/40000 [00:00&lt;00:00, 60781.99it/s]
+
+Packets:   #############################################################7                  30854/40000 [00:00&lt;00:00, 61813.02it/s]
+
+Packets:   ##########################################################################3     37188/40000 [00:00&lt;00:00, 62328.39it/s]
+Iterations:################################                                                8/20 [00:07&lt;00:10,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 1.334e+43 erg / s
         Luminosity absorbed  = 4.312e+42 erg / s
@@ -688,14 +705,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################9                                                              8982/40000 [00:00&lt;00:00, 88177.34it/s]
+Packets:   ############4                                                                   6234/40000 [00:00&lt;00:00, 58100.19it/s]
 
-Packets:   ###################################7                                            17879/40000 [00:00&lt;00:00, 88637.52it/s]
+Packets:   ########################3                                                       12158/40000 [00:00&lt;00:00, 58748.34it/s]
 
-Packets:   #####################################################6                          26814/40000 [00:00&lt;00:00, 88957.29it/s]
+Packets:   ####################################                                            18035/40000 [00:00&lt;00:00, 58337.92it/s]
 
-Packets:   #######################################################################4        35711/40000 [00:00&lt;00:00, 88769.48it/s]
-Iterations:####################################                                            9/20 [00:05&lt;00:06,  1.59it/s][tardis.simulation.base][INFO   ]
+Packets:   ################################################3                               24174/40000 [00:00&lt;00:00, 59522.15it/s]
+
+Packets:   ############################################################4                   30213/40000 [00:00&lt;00:00, 59831.66it/s]
+
+Packets:   ########################################################################3       36198/40000 [00:00&lt;00:00, 59763.96it/s]
+Iterations:####################################                                            9/20 [00:07&lt;00:09,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 8.442e+42 erg / s
         Luminosity absorbed  = 2.693e+42 erg / s
@@ -751,14 +772,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################8                                                              8927/40000 [00:00&lt;00:00, 89263.49it/s]
+Packets:   ############3                                                                   6163/40000 [00:00&lt;00:00, 61627.27it/s]
 
-Packets:   ###################################7                                            17854/40000 [00:00&lt;00:00, 89245.72it/s]
+Packets:   ########################6                                                       12326/40000 [00:00&lt;00:00, 59687.23it/s]
 
-Packets:   #####################################################5                          26779/40000 [00:00&lt;00:00, 89003.76it/s]
+Packets:   ####################################7                                           18396/40000 [00:00&lt;00:00, 60138.97it/s]
 
-Packets:   #######################################################################4        35743/40000 [00:00&lt;00:00, 89249.51it/s]
-Iterations:########################################                                        10/20 [00:06&lt;00:06,  1.59it/s][tardis.simulation.base][INFO   ]
+Packets:   ################################################8                               24413/40000 [00:00&lt;00:00, 57296.07it/s]
+
+Packets:   #############################################################3                  30687/40000 [00:00&lt;00:00, 59182.37it/s]
+
+Packets:   #########################################################################7      36883/40000 [00:00&lt;00:00, 60102.68it/s]
+Iterations:########################################                                        10/20 [00:08&lt;00:09,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 1.327e+43 erg / s
         Luminosity absorbed  = 4.253e+42 erg / s
@@ -814,14 +839,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################8                                                              8926/40000 [00:00&lt;00:00, 88060.62it/s]
+Packets:   ############2                                                                   6147/40000 [00:00&lt;00:00, 61455.99it/s]
 
-Packets:   ###################################5                                            17781/40000 [00:00&lt;00:00, 88346.69it/s]
+Packets:   ########################6                                                       12326/40000 [00:00&lt;00:00, 61650.41it/s]
 
-Packets:   #####################################################3                          26663/40000 [00:00&lt;00:00, 88561.91it/s]
+Packets:   ####################################9                                           18492/40000 [00:00&lt;00:00, 59889.77it/s]
 
-Packets:   #######################################################################1        35559/40000 [00:00&lt;00:00, 88718.40it/s]
-Iterations:############################################                                    11/20 [00:06&lt;00:05,  1.58it/s][tardis.simulation.base][INFO   ]
+Packets:   ################################################9                               24487/40000 [00:00&lt;00:00, 59503.34it/s]
+
+Packets:   #############################################################                   30547/40000 [00:00&lt;00:00, 59890.50it/s]
+
+Packets:   #########################################################################1      36564/40000 [00:00&lt;00:00, 59981.72it/s]
+Iterations:############################################                                    11/20 [00:09&lt;00:08,  1.10it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 8.521e+42 erg / s
         Luminosity absorbed  = 2.645e+42 erg / s
@@ -877,14 +906,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################7                                                              8872/40000 [00:00&lt;00:00, 87745.21it/s]
+Packets:   ############1                                                                   6059/40000 [00:00&lt;00:00, 60586.88it/s]
 
-Packets:   ###################################3                                            17657/40000 [00:00&lt;00:00, 87801.96it/s]
+Packets:   ########################4                                                       12231/40000 [00:00&lt;00:00, 61251.64it/s]
 
-Packets:   #####################################################                           26519/40000 [00:00&lt;00:00, 88170.29it/s]
+Packets:   ####################################7                                           18388/40000 [00:00&lt;00:00, 61394.29it/s]
 
-Packets:   ######################################################################8         35425/40000 [00:00&lt;00:00, 88520.44it/s]
-Iterations:################################################                                12/20 [00:07&lt;00:05,  1.58it/s][tardis.simulation.base][INFO   ]
+Packets:   #################################################                               24528/40000 [00:00&lt;00:00, 60651.09it/s]
+
+Packets:   #############################################################2                  30643/40000 [00:00&lt;00:00, 60826.71it/s]
+
+Packets:   #########################################################################8      36920/40000 [00:00&lt;00:00, 61482.37it/s]
+Iterations:################################################                                12/20 [00:10&lt;00:07,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 1.302e+43 erg / s
         Luminosity absorbed  = 4.230e+42 erg / s
@@ -940,14 +973,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################7                                                              8853/40000 [00:00&lt;00:00, 88346.41it/s]
+Packets:   ############3                                                                   6150/40000 [00:00&lt;00:00, 56177.14it/s]
 
-Packets:   ###################################3                                            17688/40000 [00:00&lt;00:00, 88341.14it/s]
+Packets:   ########################5                                                       12281/40000 [00:00&lt;00:00, 59080.09it/s]
 
-Packets:   #####################################################                           26533/40000 [00:00&lt;00:00, 88389.80it/s]
+Packets:   #####################################1                                          18554/40000 [00:00&lt;00:00, 60706.08it/s]
 
-Packets:   ######################################################################8         35434/40000 [00:00&lt;00:00, 88633.77it/s]
-Iterations:####################################################                            13/20 [00:08&lt;00:04,  1.58it/s][tardis.simulation.base][INFO   ]
+Packets:   #################################################2                              24635/40000 [00:00&lt;00:00, 60589.02it/s]
+
+Packets:   #############################################################4                  30700/40000 [00:00&lt;00:00, 58789.35it/s]
+
+Packets:   #########################################################################8      36934/40000 [00:00&lt;00:00, 59963.33it/s]
+Iterations:####################################################                            13/20 [00:11&lt;00:06,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 8.695e+42 erg / s
         Luminosity absorbed  = 2.731e+42 erg / s
@@ -1003,14 +1040,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################8                                                              8912/40000 [00:00&lt;00:00, 89111.59it/s]
+Packets:   ############6                                                                   6329/40000 [00:00&lt;00:00, 63271.51it/s]
 
-Packets:   ###################################8                                            17921/40000 [00:00&lt;00:00, 89683.13it/s]
+Packets:   #########################3                                                      12657/40000 [00:00&lt;00:00, 62390.44it/s]
 
-Packets:   #####################################################7                          26890/40000 [00:00&lt;00:00, 89455.21it/s]
+Packets:   #####################################7                                          18897/40000 [00:00&lt;00:00, 60382.42it/s]
 
-Packets:   #######################################################################6        35846/40000 [00:00&lt;00:00, 89493.61it/s]
-Iterations:########################################################                        14/20 [00:08&lt;00:03,  1.59it/s][tardis.simulation.base][INFO   ]
+Packets:   ##################################################1                             25085/40000 [00:00&lt;00:00, 60955.93it/s]
+
+Packets:   ##############################################################5                 31264/40000 [00:00&lt;00:00, 61251.30it/s]
+
+Packets:   ##########################################################################7     37394/40000 [00:00&lt;00:00, 60820.44it/s]
+Iterations:########################################################                        14/20 [00:12&lt;00:05,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 1.284e+43 erg / s
         Luminosity absorbed  = 4.115e+42 erg / s
@@ -1066,14 +1107,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################9                                                              8950/40000 [00:00&lt;00:00, 88118.53it/s]
+Packets:   ############1                                                                   6085/40000 [00:00&lt;00:00, 58536.81it/s]
 
-Packets:   ###################################6                                            17816/40000 [00:00&lt;00:00, 88432.71it/s]
+Packets:   ########################4                                                       12205/40000 [00:00&lt;00:00, 60077.93it/s]
 
-Packets:   #####################################################4                          26742/40000 [00:00&lt;00:00, 88804.46it/s]
+Packets:   ####################################4                                           18216/40000 [00:00&lt;00:00, 60024.20it/s]
 
-Packets:   #######################################################################2        35623/40000 [00:00&lt;00:00, 88768.32it/s]
-Iterations:############################################################                    15/20 [00:09&lt;00:03,  1.59it/s][tardis.simulation.base][INFO   ]
+Packets:   ################################################6                               24348/40000 [00:00&lt;00:00, 60530.45it/s]
+
+Packets:   #############################################################                   30509/40000 [00:00&lt;00:00, 60917.37it/s]
+
+Packets:   #########################################################################3      36680/40000 [00:00&lt;00:00, 61185.79it/s]
+Iterations:############################################################                    15/20 [00:13&lt;00:04,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 8.705e+42 erg / s
         Luminosity absorbed  = 2.828e+42 erg / s
@@ -1129,14 +1174,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################7                                                              8886/40000 [00:00&lt;00:00, 88848.01it/s]
+Packets:   ############2                                                                   6120/40000 [00:00&lt;00:00, 54199.81it/s]
 
-Packets:   ###################################6                                            17825/40000 [00:00&lt;00:00, 89163.48it/s]
+Packets:   ########################3                                                       12182/40000 [00:00&lt;00:00, 57781.72it/s]
 
-Packets:   #####################################################5                          26786/40000 [00:00&lt;00:00, 89364.39it/s]
+Packets:   ####################################5                                           18255/40000 [00:00&lt;00:00, 59088.13it/s]
 
-Packets:   #######################################################################5        35760/40000 [00:00&lt;00:00, 89512.03it/s]
-Iterations:################################################################                16/20 [00:09&lt;00:02,  1.59it/s][tardis.simulation.base][INFO   ]
+Packets:   ################################################8                               24420/40000 [00:00&lt;00:00, 60074.84it/s]
+
+Packets:   #############################################################                   30542/40000 [00:00&lt;00:00, 60482.02it/s]
+
+Packets:   #########################################################################3      36653/40000 [00:00&lt;00:00, 60691.92it/s]
+Iterations:################################################################                16/20 [00:14&lt;00:03,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 1.284e+43 erg / s
         Luminosity absorbed  = 4.234e+42 erg / s
@@ -1192,14 +1241,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################9                                                              8952/40000 [00:00&lt;00:00, 85881.93it/s]
+Packets:   ############1                                                                   6074/40000 [00:00&lt;00:00, 60106.65it/s]
 
-Packets:   ###################################2                                            17604/40000 [00:00&lt;00:00, 86245.77it/s]
+Packets:   ########################2                                                       12103/40000 [00:00&lt;00:00, 60210.29it/s]
 
-Packets:   ####################################################6                           26304/40000 [00:00&lt;00:00, 86583.97it/s]
+Packets:   ####################################2                                           18125/40000 [00:00&lt;00:00, 59796.76it/s]
 
-Packets:   ######################################################################1         35055/40000 [00:00&lt;00:00, 86947.25it/s]
-Iterations:####################################################################            17/20 [00:10&lt;00:01,  1.58it/s][tardis.simulation.base][INFO   ]
+Packets:   ################################################5                               24296/40000 [00:00&lt;00:00, 60547.44it/s]
+
+Packets:   ############################################################7                   30352/40000 [00:00&lt;00:00, 60205.34it/s]
+
+Packets:   ########################################################################7       36374/40000 [00:00&lt;00:00, 60179.09it/s]
+Iterations:####################################################################            17/20 [00:15&lt;00:02,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 8.803e+42 erg / s
         Luminosity absorbed  = 2.816e+42 erg / s
@@ -1255,14 +1308,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################3                                                              8696/40000 [00:00&lt;00:00, 86819.74it/s]
+Packets:   ############3                                                                   6192/40000 [00:00&lt;00:00, 61900.28it/s]
 
-Packets:   ##################################9                                             17456/40000 [00:00&lt;00:00, 87274.42it/s]
+Packets:   ########################7                                                       12383/40000 [00:00&lt;00:00, 61018.13it/s]
 
-Packets:   ####################################################3                           26184/40000 [00:00&lt;00:00, 87082.17it/s]
+Packets:   ####################################9                                           18486/40000 [00:00&lt;00:00, 60720.68it/s]
 
-Packets:   #####################################################################7          34893/40000 [00:00&lt;00:00, 87057.22it/s]
-Iterations:########################################################################        18/20 [00:11&lt;00:01,  1.57it/s][tardis.simulation.base][INFO   ]
+Packets:   #################################################1                              24559/40000 [00:00&lt;00:00, 60612.89it/s]
+
+Packets:   #############################################################2                  30621/40000 [00:00&lt;00:00, 60589.84it/s]
+
+Packets:   #########################################################################4      36718/40000 [00:00&lt;00:00, 60717.71it/s]
+Iterations:########################################################################        18/20 [00:16&lt;00:01,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 1.271e+43 erg / s
         Luminosity absorbed  = 4.117e+42 erg / s
@@ -1318,14 +1375,18 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/40000 [00:00&lt;?, ?it/s]
 
-Packets:   #################5                                                              8791/40000 [00:00&lt;00:00, 87908.41it/s]
+Packets:   ############1                                                                   6072/40000 [00:00&lt;00:00, 58891.93it/s]
 
-Packets:   ###################################2                                            17631/40000 [00:00&lt;00:00, 88194.41it/s]
+Packets:   ########################3                                                       12171/40000 [00:00&lt;00:00, 60107.13it/s]
 
-Packets:   ####################################################9                           26451/40000 [00:00&lt;00:00, 88024.61it/s]
+Packets:   ####################################5                                           18256/40000 [00:00&lt;00:00, 60441.14it/s]
 
-Packets:   ######################################################################5         35266/40000 [00:00&lt;00:00, 88070.44it/s]
-Iterations:############################################################################    19/20 [00:11&lt;00:00,  1.57it/s][tardis.simulation.base][INFO   ]
+Packets:   ################################################8                               24406/40000 [00:00&lt;00:00, 60855.31it/s]
+
+Packets:   #############################################################6                  30801/40000 [00:00&lt;00:00, 61964.21it/s]
+
+Packets:   ##########################################################################2     37132/40000 [00:00&lt;00:00, 62418.58it/s]
+Iterations:############################################################################    19/20 [00:16&lt;00:00,  1.11it/s][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 8.820e+42 erg / s
         Luminosity absorbed  = 2.873e+42 erg / s
@@ -1381,126 +1442,172 @@ INFO:tardis.simulation.base:
 
 Packets:                                                                                   0/100000 [00:00&lt;?, ?it/s]
 
-Packets:   #######                                                                         8808/100000 [00:00&lt;00:06, 14994.80it/s]
+Packets:   ####9                                                                           6243/100000 [00:00&lt;00:08, 11423.81it/s]
 
-Packets:   ########2                                                                       10308/100000 [00:00&lt;00:05, 14993.12it/s]
+Packets:   #####9                                                                          7386/100000 [00:00&lt;00:08, 11381.96it/s]
 
-Packets:   #########4                                                                      11852/100000 [00:00&lt;00:05, 15088.91it/s]
+Packets:   ######8                                                                         8517/100000 [00:00&lt;00:08, 11348.02it/s]
 
-Packets:   ##########6                                                                     13372/100000 [00:00&lt;00:05, 15080.20it/s]
+Packets:   #######7                                                                        9645/100000 [00:00&lt;00:07, 11298.78it/s]
 
-Packets:   ###########9                                                                    14886/100000 [00:00&lt;00:05, 15066.09it/s]
+Packets:   ########6                                                                       10772/100000 [00:00&lt;00:07, 11290.93it/s]
 
-Packets:   #############1                                                                  16424/100000 [00:01&lt;00:05, 15147.05it/s]
+Packets:   #########5                                                                      11897/100000 [00:01&lt;00:07, 11207.41it/s]
 
-Packets:   ##############3                                                                 17943/100000 [00:01&lt;00:05, 15105.98it/s]
+Packets:   ##########4                                                                     13013/100000 [00:01&lt;00:07, 11138.87it/s]
 
-Packets:   ###############5                                                                19456/100000 [00:01&lt;00:05, 15042.39it/s]
+Packets:   ###########2                                                                    14123/100000 [00:01&lt;00:07, 10965.82it/s]
 
-Packets:   ################7                                                               20994/100000 [00:01&lt;00:05, 15138.52it/s]
+Packets:   ############2                                                                   15276/100000 [00:01&lt;00:07, 11124.87it/s]
 
-Packets:   ##################                                                              22511/100000 [00:01&lt;00:05, 15146.63it/s]
+Packets:   #############1                                                                  16387/100000 [00:01&lt;00:07, 10980.95it/s]
 
-Packets:   ###################2                                                            24036/100000 [00:01&lt;00:05, 15171.23it/s]
+Packets:   #############9                                                                  17484/100000 [00:01&lt;00:07, 10956.22it/s]
 
-Packets:   ####################4                                                           25581/100000 [00:01&lt;00:04, 15249.73it/s]
+Packets:   ##############8                                                                 18584/100000 [00:01&lt;00:07, 10964.30it/s]
 
-Packets:   #####################6                                                          27107/100000 [00:01&lt;00:04, 15217.22it/s]
+Packets:   ###############7                                                                19685/100000 [00:01&lt;00:07, 10977.19it/s]
 
-Packets:   ######################9                                                         28630/100000 [00:01&lt;00:04, 15197.18it/s]
+Packets:   ################6                                                               20805/100000 [00:01&lt;00:07, 11039.45it/s]
 
-Packets:   ########################1                                                       30151/100000 [00:01&lt;00:04, 15189.43it/s]
+Packets:   #################5                                                              21944/100000 [00:01&lt;00:07, 11142.52it/s]
 
-Packets:   #########################3                                                      31671/100000 [00:02&lt;00:04, 15178.56it/s]
+Packets:   ##################4                                                             23068/100000 [00:02&lt;00:06, 11170.75it/s]
 
-Packets:   ##########################5                                                     33190/100000 [00:02&lt;00:04, 15155.36it/s]
+Packets:   ###################3                                                            24226/100000 [00:02&lt;00:06, 11290.90it/s]
 
-Packets:   ###########################7                                                    34723/100000 [00:02&lt;00:04, 15204.32it/s]
+Packets:   ####################2                                                           25356/100000 [00:02&lt;00:06, 11106.49it/s]
 
-Packets:   ############################9                                                   36247/100000 [00:02&lt;00:04, 15212.78it/s]
+Packets:   #####################1                                                          26490/100000 [00:02&lt;00:06, 11170.21it/s]
 
-Packets:   ##############################2                                                 37770/100000 [00:02&lt;00:04, 15215.41it/s]
+Packets:   ######################                                                          27608/100000 [00:02&lt;00:06, 11161.03it/s]
 
-Packets:   ###############################4                                                39292/100000 [00:02&lt;00:03, 15183.76it/s]
+Packets:   ######################9                                                         28746/100000 [00:02&lt;00:06, 11225.17it/s]
 
-Packets:   ################################6                                               40811/100000 [00:02&lt;00:03, 15171.87it/s]
+Packets:   #######################8                                                        29872/100000 [00:02&lt;00:06, 11233.15it/s]
 
-Packets:   #################################8                                              42329/100000 [00:02&lt;00:03, 15113.43it/s]
+Packets:   ########################7                                                       30996/100000 [00:02&lt;00:06, 11221.13it/s]
 
-Packets:   ###################################                                             43855/100000 [00:02&lt;00:03, 15154.98it/s]
+Packets:   #########################6                                                      32119/100000 [00:02&lt;00:06, 11187.01it/s]
 
-Packets:   ####################################2                                           45371/100000 [00:02&lt;00:03, 15106.08it/s]
+Packets:   ##########################5                                                     33238/100000 [00:02&lt;00:06, 11069.43it/s]
 
-Packets:   #####################################5                                          46890/100000 [00:03&lt;00:03, 15129.92it/s]
+Packets:   ###########################4                                                    34346/100000 [00:03&lt;00:06, 10922.66it/s]
 
-Packets:   ######################################7                                         48404/100000 [00:03&lt;00:03, 15132.66it/s]
+Packets:   ############################3                                                   35444/100000 [00:03&lt;00:05, 10937.47it/s]
 
-Packets:   #######################################9                                        49918/100000 [00:03&lt;00:03, 15113.19it/s]
+Packets:   #############################2                                                  36605/100000 [00:03&lt;00:05, 11128.77it/s]
 
-Packets:   #########################################1                                      51430/100000 [00:03&lt;00:03, 15074.75it/s]
+Packets:   ##############################1                                                 37737/100000 [00:03&lt;00:05, 11181.89it/s]
 
-Packets:   ##########################################3                                     52941/100000 [00:03&lt;00:03, 15080.78it/s]
+Packets:   ###############################                                                 38856/100000 [00:03&lt;00:05, 11067.83it/s]
 
-Packets:   ###########################################5                                    54460/100000 [00:03&lt;00:03, 15113.40it/s]
+Packets:   ###############################9                                                39964/100000 [00:03&lt;00:05, 11070.16it/s]
 
-Packets:   ############################################7                                   55972/100000 [00:03&lt;00:02, 15060.02it/s]
+Packets:   ################################8                                               41072/100000 [00:03&lt;00:05, 11036.16it/s]
 
-Packets:   ##############################################                                  57533/100000 [00:03&lt;00:02, 15223.64it/s]
+Packets:   #################################7                                              42182/100000 [00:03&lt;00:05, 11053.31it/s]
 
-Packets:   ###############################################2                                59056/100000 [00:03&lt;00:02, 15153.37it/s]
+Packets:   ##################################6                                             43322/100000 [00:03&lt;00:05, 11156.68it/s]
 
-Packets:   ################################################4                               60572/100000 [00:04&lt;00:02, 15105.67it/s]
+Packets:   ###################################5                                            44438/100000 [00:03&lt;00:05, 11109.36it/s]
 
-Packets:   #################################################6                              62083/100000 [00:04&lt;00:02, 14991.00it/s]
+Packets:   ####################################4                                           45556/100000 [00:04&lt;00:04, 11128.80it/s]
 
-Packets:   ##################################################8                             63616/100000 [00:04&lt;00:02, 15091.19it/s]
+Packets:   #####################################3                                          46669/100000 [00:04&lt;00:04, 11116.07it/s]
 
-Packets:   ####################################################1                           65167/100000 [00:04&lt;00:02, 15213.50it/s]
+Packets:   ######################################2                                         47810/100000 [00:04&lt;00:04, 11202.96it/s]
 
-Packets:   #####################################################3                          66701/100000 [00:04&lt;00:02, 15248.50it/s]
+Packets:   #######################################1                                        48961/100000 [00:04&lt;00:04, 11293.71it/s]
 
-Packets:   ######################################################5                         68227/100000 [00:04&lt;00:02, 15173.55it/s]
+Packets:   ########################################                                        50091/100000 [00:04&lt;00:04, 11278.79it/s]
 
-Packets:   #######################################################8                        69752/100000 [00:04&lt;00:01, 15195.17it/s]
+Packets:   ########################################9                                       51219/100000 [00:04&lt;00:04, 11257.93it/s]
 
-Packets:   #########################################################                       71285/100000 [00:04&lt;00:01, 15227.66it/s]
+Packets:   #########################################9                                      52398/100000 [00:04&lt;00:04, 11411.89it/s]
 
-Packets:   ##########################################################2                     72808/100000 [00:04&lt;00:01, 15221.65it/s]
+Packets:   ##########################################8                                     53540/100000 [00:04&lt;00:04, 11342.93it/s]
 
-Packets:   ###########################################################4                    74331/100000 [00:04&lt;00:01, 15178.53it/s]
+Packets:   ###########################################7                                    54688/100000 [00:04&lt;00:03, 11381.62it/s]
 
-Packets:   ############################################################6                   75864/100000 [00:05&lt;00:01, 15216.56it/s]
+Packets:   ############################################6                                   55827/100000 [00:04&lt;00:03, 11274.31it/s]
 
-Packets:   #############################################################9                  77386/100000 [00:05&lt;00:01, 15039.77it/s]
+Packets:   #############################################5                                  56955/100000 [00:05&lt;00:03, 11238.83it/s]
 
-Packets:   ###############################################################1                78891/100000 [00:05&lt;00:01, 15006.36it/s]
+Packets:   ##############################################4                                 58080/100000 [00:05&lt;00:03, 11181.70it/s]
 
-Packets:   ################################################################3               80409/100000 [00:05&lt;00:01, 15057.14it/s]
+Packets:   ###############################################3                                59199/100000 [00:05&lt;00:03, 11111.02it/s]
 
-Packets:   #################################################################5              81915/100000 [00:05&lt;00:01, 15057.86it/s]
+Packets:   ################################################2                               60311/100000 [00:05&lt;00:03, 11078.75it/s]
 
-Packets:   ##################################################################7             83445/100000 [00:05&lt;00:01, 15129.68it/s]
+Packets:   #################################################1                              61419/100000 [00:05&lt;00:03, 11054.13it/s]
 
-Packets:   ###################################################################9            84992/100000 [00:05&lt;00:00, 15231.06it/s]
+Packets:   ##################################################                              62525/100000 [00:05&lt;00:03, 11031.64it/s]
 
-Packets:   #####################################################################2          86516/100000 [00:05&lt;00:00, 15208.20it/s]
+Packets:   ##################################################9                             63629/100000 [00:05&lt;00:03, 11016.64it/s]
 
-Packets:   ######################################################################4         88037/100000 [00:05&lt;00:00, 15173.61it/s]
+Packets:   ###################################################8                            64758/100000 [00:05&lt;00:03, 11096.97it/s]
 
-Packets:   #######################################################################6        89559/100000 [00:05&lt;00:00, 15181.76it/s]
+Packets:   ####################################################7                           65927/100000 [00:05&lt;00:03, 11271.94it/s]
 
-Packets:   ########################################################################8       91093/100000 [00:06&lt;00:00, 15227.81it/s]
+Packets:   #####################################################6                          67071/100000 [00:06&lt;00:02, 11320.69it/s]
 
-Packets:   ##########################################################################      92616/100000 [00:06&lt;00:00, 15074.50it/s]
+Packets:   ######################################################5                         68204/100000 [00:06&lt;00:02, 11125.35it/s]
 
-Packets:   ###########################################################################3    94136/100000 [00:06&lt;00:00, 15104.38it/s]
+Packets:   #######################################################4                        69318/100000 [00:06&lt;00:02, 11057.98it/s]
 
-Packets:   ############################################################################5   95647/100000 [00:06&lt;00:00, 15050.86it/s]
+Packets:   ########################################################3                       70443/100000 [00:06&lt;00:02, 11114.28it/s]
 
-Packets:   #############################################################################7  97170/100000 [00:06&lt;00:00, 15103.52it/s]
+Packets:   #########################################################2                      71615/100000 [00:06&lt;00:02, 11292.67it/s]
 
-Packets:   ##############################################################################9 98681/100000 [00:06&lt;00:00, 14950.70it/s]
-Iterations:################################################################################20/20 [00:18&lt;00:00,  2.55s/it][tardis.simulation.base][INFO   ]
+Packets:   ##########################################################1                     72749/100000 [00:06&lt;00:02, 11305.26it/s]
+
+Packets:   ###########################################################1                    73880/100000 [00:06&lt;00:02, 11257.41it/s]
+
+Packets:   ############################################################                    75026/100000 [00:06&lt;00:02, 11308.36it/s]
+
+Packets:   ############################################################9                   76158/100000 [00:06&lt;00:02, 11266.72it/s]
+
+Packets:   #############################################################8                  77307/100000 [00:06&lt;00:02, 11330.71it/s]
+
+Packets:   ##############################################################7                 78452/100000 [00:07&lt;00:01, 11365.52it/s]
+
+Packets:   ###############################################################6                79589/100000 [00:07&lt;00:01, 11320.17it/s]
+
+Packets:   ################################################################5               80740/100000 [00:07&lt;00:01, 11376.69it/s]
+
+Packets:   #################################################################5              81887/100000 [00:07&lt;00:01, 11403.89it/s]
+
+Packets:   ##################################################################4             83029/100000 [00:07&lt;00:01, 11406.20it/s]
+
+Packets:   ###################################################################3            84195/100000 [00:07&lt;00:01, 11481.28it/s]
+
+Packets:   ####################################################################2           85344/100000 [00:07&lt;00:01, 11421.83it/s]
+
+Packets:   #####################################################################1          86498/100000 [00:07&lt;00:01, 11454.23it/s]
+
+Packets:   ######################################################################1         87644/100000 [00:07&lt;00:01, 11437.34it/s]
+
+Packets:   #######################################################################         88813/100000 [00:07&lt;00:00, 11508.26it/s]
+
+Packets:   #######################################################################9        89974/100000 [00:08&lt;00:00, 11538.01it/s]
+
+Packets:   ########################################################################9       91141/100000 [00:08&lt;00:00, 11575.29it/s]
+
+Packets:   #########################################################################8      92299/100000 [00:08&lt;00:00, 11473.85it/s]
+
+Packets:   ##########################################################################7     93490/100000 [00:08&lt;00:00, 11598.57it/s]
+
+Packets:   ###########################################################################7    94652/100000 [00:08&lt;00:00, 11603.79it/s]
+
+Packets:   ############################################################################6   95813/100000 [00:08&lt;00:00, 11515.71it/s]
+
+Packets:   #############################################################################5  96965/100000 [00:08&lt;00:00, 11483.29it/s]
+
+Packets:   ##############################################################################4 98114/100000 [00:08&lt;00:00, 11105.19it/s]
+
+Packets:   ###############################################################################399228/100000 [00:08&lt;00:00, 11070.55it/s]
+Iterations:################################################################################20/20 [00:26&lt;00:00,  3.47s/it][tardis.simulation.base][INFO   ]
 
         Luminosity emitted   = 1.272e+43 erg / s
         Luminosity absorbed  = 4.149e+42 erg / s
@@ -1514,11 +1621,11 @@ INFO:tardis.simulation.base:
 [tardis.simulation.base][INFO   ]
 
         Simulation finished in 20 iterations
-        Simulation took 41.29 s
+        Simulation took 56.21 s
  (base.py:468)
 INFO:tardis.simulation.base:
         Simulation finished in 20 iterations
-        Simulation took 41.29 s
+        Simulation took 56.21 s
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spectrum</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">spectrum</span>
@@ -1544,10 +1651,10 @@ INFO:tardis.simulation.base:
   warnings.warn(
 
 
-Packets:   ################################################################################100000/100000 [00:21&lt;00:00, 14950.70it/s]
+Packets:   ################################################################################100000/100000 [00:21&lt;00:00, 11070.55it/s]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 3 minutes  12.295 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  45.057 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-2014-examples-plot-tardis-example-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/e237d23b7dba7bc4b96fddca743d16bd/plot_tardis_example.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_tardis_example.py</span></code></a></p>
