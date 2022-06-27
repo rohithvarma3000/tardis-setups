@@ -9,9 +9,9 @@ def find_file(name, path):
 
 
 def config_modifier(conf):
-    conf["montecarlo"]["nthreads"] = 1
+    conf["montecarlo"]["nthreads"] = 2
     conf["montecarlo"]["last_no_of_packets"] = 1.0e5
-    conf["montecarlo"]["no_of_virtual_packets"] = 10
+    conf["montecarlo"]["no_of_virtual_packets"] = 3
 
     conf["atom_data"] = os.path.join(
         os.path.expanduser("~"), "Downloads", "tardis-data", conf["atom_data"]
