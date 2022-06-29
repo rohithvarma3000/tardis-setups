@@ -4,6 +4,9 @@ on:
   push:
     branches: [master,test-flow]
 
+  repository_dispatch:
+    types: [setups-docs]
+
 defaults:
   run:
     shell: bash -l {0}
@@ -59,4 +62,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./setups/html
           publish_branch: gh-pages
-          destination_dir: testing/
+          destination_dir: testing2/
