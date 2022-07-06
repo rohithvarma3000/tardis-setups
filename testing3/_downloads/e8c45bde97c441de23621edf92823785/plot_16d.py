@@ -8,7 +8,7 @@ Williamson, Marc, Kerzendorf, Wolfgang, Modjaz, Maryam 2021, ApJ,
 This plot shows the output obtained by TARDIS for the SN 1994I spectra 16 days post explosion.
 Please refer figure 2 from the paper to compare the results of the paper.
 
-.._ADS Link: https://ui.adsabs.harvard.edu/abs/2021ApJ...908..150W
+.. _ADS Link: https://ui.adsabs.harvard.edu/abs/2021ApJ...908..150W
 """
 
 

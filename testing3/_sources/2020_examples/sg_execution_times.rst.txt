@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**08:00.512** total execution time for **2020_examples** files:
+**08:21.531** total execution time for **2020_examples** files:
 
 +-------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_2020_examples_plot_16d.py` (``plot_16d.py``) | 08:00.512 | 0.0 MB |
+| :ref:`sphx_glr_2020_examples_plot_16d.py` (``plot_16d.py``) | 08:21.531 | 0.0 MB |
 +-------------------------------------------------------------+-----------+--------+
