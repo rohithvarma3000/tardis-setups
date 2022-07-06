@@ -167,9 +167,9 @@ Runs the example
     Iterations:                                                                                0/20 [00:00<?, ?it/s]
     Packets:                                                                                   0/40000 [00:00<?, ?it/s]
     Packets:                                                                                   0/40000 [00:00<?, ?it/s]
-    Packets:   #######################3                                                        11662/40000 [00:00<00:00, 116608.43it/s]
-    Packets:   ###############################################7                                23888/40000 [00:00<00:00, 119914.49it/s]
-    Packets:   #########################################################################9      36962/40000 [00:00<00:00, 124855.82it/s]    Iterations:####                                                                            1/20 [00:00<00:06,  2.72it/s][tardis.simulation.base][INFO   ]  
+    Packets:   ###################3                                                            9676/40000 [00:00<00:00, 96743.25it/s]
+    Packets:   #######################################8                                        19948/40000 [00:00<00:00, 100246.84it/s]
+    Packets:   ############################################################4                   30202/40000 [00:00<00:00, 101291.68it/s]    Iterations:####                                                                            1/20 [00:00<00:08,  2.33it/s][tardis.simulation.base][INFO   ]  
         
             Luminosity emitted   = 7.942e+42 erg / s
             Luminosity absorbed  = 2.659e+42 erg / s
@@ -191,14 +191,14 @@ Runs the example
             0         9.93e+03   1.01e+04    0.4   0.507
             5         9.85e+03   1.02e+04  0.211   0.197
             10        9.78e+03   1.01e+04  0.143   0.117
-            15        9.71e+03   9.88e+03  0.105  0.0868
+            15        9.71e+03   9.87e+03  0.105  0.0869
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w   next_w
             0         9.93e+03   1.01e+04    0.4   0.507
             5         9.85e+03   1.02e+04  0.211   0.197
             10        9.78e+03   1.01e+04  0.143   0.117
-            15        9.71e+03   9.88e+03  0.105  0.0868
+            15        9.71e+03   9.87e+03  0.105  0.0869
 
     [tardis.simulation.base][INFO   ]  
         
@@ -223,17 +223,17 @@ Runs the example
             Starting iteration 2 of 20
 
     Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   ########################9                                                       12486/40000 [00:00<00:00, 118139.55it/s]
-    Packets:   ################################################8                               24422/40000 [00:00<00:00, 118835.23it/s]
-    Packets:   ###########################################################################1    37592/40000 [00:00<00:00, 124635.49it/s]    Iterations:########                                                                        2/20 [00:00<00:08,  2.14it/s][tardis.simulation.base][INFO   ]  
+    Packets:   ####################2                                                           10130/40000 [00:00<00:00, 98848.39it/s]
+    Packets:   ########################################1                                       20068/40000 [00:00<00:00, 99146.71it/s]
+    Packets:   ############################################################2                   30148/40000 [00:00<00:00, 99895.63it/s]    Iterations:########                                                                        2/20 [00:01<00:09,  1.87it/s][tardis.simulation.base][INFO   ]  
         
             Luminosity emitted   = 1.406e+43 erg / s
-            Luminosity absorbed  = 4.793e+42 erg / s
+            Luminosity absorbed  = 4.794e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
             Luminosity emitted   = 1.406e+43 erg / s
-            Luminosity absorbed  = 4.793e+42 erg / s
+            Luminosity absorbed  = 4.794e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -244,26 +244,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.01e+04   1.15e+04   0.507  0.546 
+            0         1.01e+04   1.15e+04   0.507  0.547 
             5         1.02e+04   1.15e+04   0.197  0.223 
             10        1.01e+04   1.13e+04   0.117  0.134 
-            15        9.88e+03    1.1e+04  0.0868  0.101 
+            15        9.87e+03    1.1e+04  0.0869  0.101 
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.01e+04   1.15e+04   0.507  0.546 
+            0         1.01e+04   1.15e+04   0.507  0.547 
             5         1.02e+04   1.15e+04   0.197  0.223 
             10        1.01e+04   1.13e+04   0.117  0.134 
-            15        9.88e+03    1.1e+04  0.0868  0.101 
+            15        9.87e+03    1.1e+04  0.0869  0.101 
 
     [tardis.simulation.base][INFO   ]  
         
             Current t_inner = 11472.471 K
-            Expected t_inner for next iteration = 9958.302 K
+            Expected t_inner for next iteration = 9958.849 K
      (base.py:542)
     INFO:tardis.simulation.base:
             Current t_inner = 11472.471 K
-            Expected t_inner for next iteration = 9958.302 K
+            Expected t_inner for next iteration = 9958.849 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -278,18 +278,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 3 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   ########################9                                                       12472/40000 [00:00<00:00, 120076.30it/s]
-    Packets:   #################################################6                              24842/40000 [00:00<00:00, 122160.88it/s]
-    Packets:   ############################################################################3   38162/40000 [00:00<00:00, 127157.67it/s]    Iterations:############                                                                    3/20 [00:01<00:08,  2.02it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################9                                                            9992/40000 [00:00<00:00, 96157.96it/s]
+    Packets:   #######################################3                                        19690/40000 [00:00<00:00, 96633.10it/s]
+    Packets:   ##########################################################8                     29426/40000 [00:00<00:00, 96957.89it/s]    Iterations:############                                                                    3/20 [00:01<00:09,  1.74it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 8.166e+42 erg / s
-            Luminosity absorbed  = 2.544e+42 erg / s
+            Luminosity emitted   = 8.167e+42 erg / s
+            Luminosity absorbed  = 2.545e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 8.166e+42 erg / s
-            Luminosity absorbed  = 2.544e+42 erg / s
+            Luminosity emitted   = 8.167e+42 erg / s
+            Luminosity absorbed  = 2.545e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -300,26 +300,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w   next_w
-            0         1.15e+04   1.05e+04  0.546   0.439
-            5         1.15e+04   1.08e+04  0.223   0.165
+            0         1.15e+04   1.05e+04  0.547    0.44
+            5         1.15e+04   1.08e+04  0.223   0.164
             10        1.13e+04   1.06e+04  0.134   0.102
-            15         1.1e+04   1.03e+04  0.101  0.0765
+            15         1.1e+04   1.03e+04  0.101  0.0771
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w   next_w
-            0         1.15e+04   1.05e+04  0.546   0.439
-            5         1.15e+04   1.08e+04  0.223   0.165
+            0         1.15e+04   1.05e+04  0.547    0.44
+            5         1.15e+04   1.08e+04  0.223   0.164
             10        1.13e+04   1.06e+04  0.134   0.102
-            15         1.1e+04   1.03e+04  0.101  0.0765
+            15         1.1e+04   1.03e+04  0.101  0.0771
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 9958.302 K
-            Expected t_inner for next iteration = 11341.841 K
+            Current t_inner = 9958.849 K
+            Expected t_inner for next iteration = 11341.542 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 9958.302 K
-            Expected t_inner for next iteration = 11341.841 K
+            Current t_inner = 9958.849 K
+            Expected t_inner for next iteration = 11341.542 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -334,18 +334,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 4 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #########################4                                                      12722/40000 [00:00<00:00, 119739.64it/s]
-    Packets:   #################################################6                              24828/40000 [00:00<00:00, 120481.59it/s]
-    Packets:   ###########################################################################7    37898/40000 [00:00<00:00, 125077.30it/s]    Iterations:################                                                                4/20 [00:01<00:08,  1.97it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################3                                                            9698/40000 [00:00<00:00, 93691.52it/s]
+    Packets:   ######################################1                                         19068/40000 [00:00<00:00, 93082.15it/s]
+    Packets:   ##########################################################5                     29280/40000 [00:00<00:00, 97161.13it/s]    Iterations:################                                                                4/20 [00:02<00:09,  1.69it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 1.357e+43 erg / s
-            Luminosity absorbed  = 4.441e+42 erg / s
+            Luminosity emitted   = 1.356e+43 erg / s
+            Luminosity absorbed  = 4.447e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 1.357e+43 erg / s
-            Luminosity absorbed  = 4.441e+42 erg / s
+            Luminosity emitted   = 1.356e+43 erg / s
+            Luminosity absorbed  = 4.447e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -356,26 +356,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.05e+04   1.16e+04   0.439   0.498
-            5         1.08e+04   1.17e+04   0.165     0.2
+            0         1.05e+04   1.16e+04    0.44   0.497
+            5         1.08e+04   1.17e+04   0.164   0.198
             10        1.06e+04   1.14e+04   0.102   0.126
-            15        1.03e+04   1.11e+04  0.0765  0.0947
+            15        1.03e+04    1.1e+04  0.0771  0.0956
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.05e+04   1.16e+04   0.439   0.498
-            5         1.08e+04   1.17e+04   0.165     0.2
+            0         1.05e+04   1.16e+04    0.44   0.497
+            5         1.08e+04   1.17e+04   0.164   0.198
             10        1.06e+04   1.14e+04   0.102   0.126
-            15        1.03e+04   1.11e+04  0.0765  0.0947
+            15        1.03e+04    1.1e+04  0.0771  0.0956
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 11341.841 K
-            Expected t_inner for next iteration = 10020.073 K
+            Current t_inner = 11341.542 K
+            Expected t_inner for next iteration = 10022.768 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 11341.841 K
-            Expected t_inner for next iteration = 10020.073 K
+            Current t_inner = 11341.542 K
+            Expected t_inner for next iteration = 10022.768 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -390,18 +390,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 5 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #########################                                                       12516/40000 [00:00<00:00, 112642.74it/s]
-    Packets:   ###############################################5                                23800/40000 [00:00<00:00, 112748.77it/s]
-    Packets:   #########################################################################1      36590/40000 [00:00<00:00, 119497.79it/s]    Iterations:####################                                                            5/20 [00:02<00:07,  1.92it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################4                                                            9722/40000 [00:00<00:00, 92258.42it/s]
+    Packets:   ######################################1                                         19100/40000 [00:00<00:00, 93129.02it/s]
+    Packets:   ########################################################8                       28416/40000 [00:00<00:00, 92620.87it/s]    Iterations:####################                                                            5/20 [00:02<00:09,  1.65it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 8.344e+42 erg / s
-            Luminosity absorbed  = 2.630e+42 erg / s
+            Luminosity emitted   = 8.322e+42 erg / s
+            Luminosity absorbed  = 2.663e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 8.344e+42 erg / s
-            Luminosity absorbed  = 2.630e+42 erg / s
+            Luminosity emitted   = 8.322e+42 erg / s
+            Luminosity absorbed  = 2.663e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -412,26 +412,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.16e+04   1.05e+04   0.498   0.445
-            5         1.17e+04   1.09e+04     0.2   0.163
-            10        1.14e+04   1.07e+04   0.126   0.101
-            15        1.11e+04   1.04e+04  0.0947  0.0752
+            0         1.16e+04   1.05e+04   0.497   0.446
+            5         1.17e+04   1.09e+04   0.198   0.164
+            10        1.14e+04   1.07e+04   0.126     0.1
+            15         1.1e+04   1.04e+04  0.0956  0.0751
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.16e+04   1.05e+04   0.498   0.445
-            5         1.17e+04   1.09e+04     0.2   0.163
-            10        1.14e+04   1.07e+04   0.126   0.101
-            15        1.11e+04   1.04e+04  0.0947  0.0752
+            0         1.16e+04   1.05e+04   0.497   0.446
+            5         1.17e+04   1.09e+04   0.198   0.164
+            10        1.14e+04   1.07e+04   0.126     0.1
+            15         1.1e+04   1.04e+04  0.0956  0.0751
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 10020.073 K
-            Expected t_inner for next iteration = 11289.663 K
+            Current t_inner = 10022.768 K
+            Expected t_inner for next iteration = 11307.547 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 10020.073 K
-            Expected t_inner for next iteration = 11289.663 K
+            Current t_inner = 10022.768 K
+            Expected t_inner for next iteration = 11307.547 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -446,18 +446,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 6 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #######################9                                                        11968/40000 [00:00<00:00, 115466.73it/s]
-    Packets:   ###############################################2                                23638/40000 [00:00<00:00, 116177.98it/s]
-    Packets:   #######################################################################1        35568/40000 [00:00<00:00, 117590.39it/s]    Iterations:########################                                                        6/20 [00:03<00:07,  1.89it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################4                                                            9730/40000 [00:00<00:00, 97268.32it/s]
+    Packets:   #######################################2                                        19602/40000 [00:00<00:00, 98119.85it/s]
+    Packets:   ###########################################################4                    29726/40000 [00:00<00:00, 99541.68it/s]    Iterations:########################                                                        6/20 [00:03<00:08,  1.65it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 1.329e+43 erg / s
-            Luminosity absorbed  = 4.390e+42 erg / s
+            Luminosity emitted   = 1.331e+43 erg / s
+            Luminosity absorbed  = 4.473e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 1.329e+43 erg / s
-            Luminosity absorbed  = 4.390e+42 erg / s
+            Luminosity emitted   = 1.331e+43 erg / s
+            Luminosity absorbed  = 4.473e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -468,26 +468,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.05e+04   1.15e+04   0.445   0.503
-            5         1.09e+04   1.17e+04   0.163   0.196
-            10        1.07e+04   1.15e+04   0.101   0.123
-            15        1.04e+04   1.11e+04  0.0752  0.0921
+            0         1.05e+04   1.16e+04   0.446   0.503
+            5         1.09e+04   1.17e+04   0.164   0.201
+            10        1.07e+04   1.15e+04     0.1   0.123
+            15        1.04e+04    1.1e+04  0.0751  0.0967
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.05e+04   1.15e+04   0.445   0.503
-            5         1.09e+04   1.17e+04   0.163   0.196
-            10        1.07e+04   1.15e+04   0.101   0.123
-            15        1.04e+04   1.11e+04  0.0752  0.0921
+            0         1.05e+04   1.16e+04   0.446   0.503
+            5         1.09e+04   1.17e+04   0.164   0.201
+            10        1.07e+04   1.15e+04     0.1   0.123
+            15        1.04e+04    1.1e+04  0.0751  0.0967
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 11289.663 K
-            Expected t_inner for next iteration = 10080.434 K
+            Current t_inner = 11307.547 K
+            Expected t_inner for next iteration = 10085.646 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 11289.663 K
-            Expected t_inner for next iteration = 10080.434 K
+            Current t_inner = 11307.547 K
+            Expected t_inner for next iteration = 10085.646 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -502,18 +502,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 7 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #######################5                                                        11762/40000 [00:00<00:00, 115731.67it/s]
-    Packets:   ##############################################6                                 23336/40000 [00:00<00:00, 115711.78it/s]
-    Packets:   ######################################################################7         35382/40000 [00:00<00:00, 117867.61it/s]    Iterations:############################                                                    7/20 [00:03<00:06,  1.87it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################9                                                            9956/40000 [00:00<00:00, 91051.89it/s]
+    Packets:   ######################################7                                         19390/40000 [00:00<00:00, 92901.79it/s]
+    Packets:   #########################################################4                      28728/40000 [00:00<00:00, 93111.63it/s]    Iterations:############################                                                    7/20 [00:04<00:08,  1.62it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 8.540e+42 erg / s
-            Luminosity absorbed  = 2.704e+42 erg / s
+            Luminosity emitted   = 8.566e+42 erg / s
+            Luminosity absorbed  = 2.701e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 8.540e+42 erg / s
-            Luminosity absorbed  = 2.704e+42 erg / s
+            Luminosity emitted   = 8.566e+42 erg / s
+            Luminosity absorbed  = 2.701e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -524,26 +524,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.15e+04   1.06e+04   0.503   0.442
-            5         1.17e+04   1.11e+04   0.196   0.159
-            10        1.15e+04   1.08e+04   0.123   0.101
-            15        1.11e+04   1.04e+04  0.0921  0.0761
+            0         1.16e+04   1.07e+04   0.503   0.435
+            5         1.17e+04   1.11e+04   0.201   0.156
+            10        1.15e+04   1.08e+04   0.123  0.0986
+            15         1.1e+04   1.04e+04  0.0967  0.0753
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.15e+04   1.06e+04   0.503   0.442
-            5         1.17e+04   1.11e+04   0.196   0.159
-            10        1.15e+04   1.08e+04   0.123   0.101
-            15        1.11e+04   1.04e+04  0.0921  0.0761
+            0         1.16e+04   1.07e+04   0.503   0.435
+            5         1.17e+04   1.11e+04   0.201   0.156
+            10        1.15e+04   1.08e+04   0.123  0.0986
+            15         1.1e+04   1.04e+04  0.0967  0.0753
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 10080.434 K
-            Expected t_inner for next iteration = 11226.922 K
+            Current t_inner = 10085.646 K
+            Expected t_inner for next iteration = 11215.350 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 10080.434 K
-            Expected t_inner for next iteration = 11226.922 K
+            Current t_inner = 10085.646 K
+            Expected t_inner for next iteration = 11215.350 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -558,18 +558,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 8 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #######################5                                                        11788/40000 [00:00<00:00, 112526.75it/s]
-    Packets:   ##############################################5                                 23288/40000 [00:00<00:00, 113941.49it/s]
-    Packets:   #####################################################################5          34778/40000 [00:00<00:00, 114365.59it/s]    Iterations:################################                                                8/20 [00:04<00:06,  1.86it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ####################                                                            10000/40000 [00:00<00:00, 99987.46it/s]
+    Packets:   ########################################                                        20000/40000 [00:00<00:00, 97946.99it/s]
+    Packets:   ###########################################################5                    29798/40000 [00:00<00:00, 97935.27it/s]    Iterations:################################                                                8/20 [00:04<00:07,  1.63it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 1.305e+43 erg / s
-            Luminosity absorbed  = 4.239e+42 erg / s
+            Luminosity emitted   = 1.301e+43 erg / s
+            Luminosity absorbed  = 4.208e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 1.305e+43 erg / s
-            Luminosity absorbed  = 4.239e+42 erg / s
+            Luminosity emitted   = 1.301e+43 erg / s
+            Luminosity absorbed  = 4.208e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -580,26 +580,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.06e+04   1.15e+04   0.442   0.502
-            5         1.11e+04   1.17e+04   0.159   0.195
-            10        1.08e+04   1.14e+04   0.101   0.124
-            15        1.04e+04   1.11e+04  0.0761  0.0914
+            0         1.07e+04   1.15e+04   0.435   0.494
+            5         1.11e+04   1.16e+04   0.156   0.199
+            10        1.08e+04   1.15e+04  0.0986   0.121
+            15        1.04e+04    1.1e+04  0.0753  0.0935
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.06e+04   1.15e+04   0.442   0.502
-            5         1.11e+04   1.17e+04   0.159   0.195
-            10        1.08e+04   1.14e+04   0.101   0.124
-            15        1.04e+04   1.11e+04  0.0761  0.0914
+            0         1.07e+04   1.15e+04   0.435   0.494
+            5         1.11e+04   1.16e+04   0.156   0.199
+            10        1.08e+04   1.15e+04  0.0986   0.121
+            15        1.04e+04    1.1e+04  0.0753  0.0935
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 11226.922 K
-            Expected t_inner for next iteration = 10113.890 K
+            Current t_inner = 11215.350 K
+            Expected t_inner for next iteration = 10118.808 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 11226.922 K
-            Expected t_inner for next iteration = 10113.890 K
+            Current t_inner = 11215.350 K
+            Expected t_inner for next iteration = 10118.808 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -614,18 +614,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 9 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #######################                                                         11528/40000 [00:00<00:00, 115276.54it/s]
-    Packets:   ##############################################3                                 23182/40000 [00:00<00:00, 116001.42it/s]
-    Packets:   #######################################################################         35510/40000 [00:00<00:00, 119324.07it/s]    Iterations:####################################                                            9/20 [00:04<00:05,  1.86it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################5                                                            9796/40000 [00:00<00:00, 94433.83it/s]
+    Packets:   ######################################9                                         19496/40000 [00:00<00:00, 95906.63it/s]
+    Packets:   ##########################################################1                     29090/40000 [00:00<00:00, 83100.46it/s]    Iterations:####################################                                            9/20 [00:05<00:06,  1.60it/s][tardis.simulation.base][INFO   ]  
         
             Luminosity emitted   = 8.637e+42 erg / s
-            Luminosity absorbed  = 2.755e+42 erg / s
+            Luminosity absorbed  = 2.776e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
             Luminosity emitted   = 8.637e+42 erg / s
-            Luminosity absorbed  = 2.755e+42 erg / s
+            Luminosity absorbed  = 2.776e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -636,26 +636,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.15e+04   1.06e+04   0.502   0.444
-            5         1.17e+04    1.1e+04   0.195   0.165
-            10        1.14e+04   1.07e+04   0.124   0.104
-            15        1.11e+04   1.05e+04  0.0914  0.0751
+            0         1.15e+04   1.07e+04   0.494    0.44
+            5         1.16e+04    1.1e+04   0.199   0.161
+            10        1.15e+04   1.08e+04   0.121   0.101
+            15         1.1e+04   1.05e+04  0.0935  0.0746
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.15e+04   1.06e+04   0.502   0.444
-            5         1.17e+04    1.1e+04   0.195   0.165
-            10        1.14e+04   1.07e+04   0.124   0.104
-            15        1.11e+04   1.05e+04  0.0914  0.0751
+            0         1.15e+04   1.07e+04   0.494    0.44
+            5         1.16e+04    1.1e+04   0.199   0.161
+            10        1.15e+04   1.08e+04   0.121   0.101
+            15         1.1e+04   1.05e+04  0.0935  0.0746
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 10113.890 K
-            Expected t_inner for next iteration = 11200.869 K
+            Current t_inner = 10118.808 K
+            Expected t_inner for next iteration = 11205.910 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 10113.890 K
-            Expected t_inner for next iteration = 11200.869 K
+            Current t_inner = 10118.808 K
+            Expected t_inner for next iteration = 11205.910 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -670,18 +670,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 10 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #######################8                                                        11934/40000 [00:00<00:00, 112583.44it/s]
-    Packets:   ##############################################3                                 23198/40000 [00:00<00:00, 112614.43it/s]
-    Packets:   #####################################################################           34524/40000 [00:00<00:00, 112904.87it/s]    Iterations:########################################                                        10/20 [00:05<00:05,  1.85it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################6                                                            9840/40000 [00:00<00:00, 98367.96it/s]
+    Packets:   #######################################3                                        19678/40000 [00:00<00:00, 97180.66it/s]
+    Packets:   ##########################################################9                     29486/40000 [00:00<00:00, 97582.27it/s]    Iterations:########################################                                        10/20 [00:06<00:06,  1.61it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 1.298e+43 erg / s
-            Luminosity absorbed  = 4.153e+42 erg / s
+            Luminosity emitted   = 1.299e+43 erg / s
+            Luminosity absorbed  = 4.172e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 1.298e+43 erg / s
-            Luminosity absorbed  = 4.153e+42 erg / s
+            Luminosity emitted   = 1.299e+43 erg / s
+            Luminosity absorbed  = 4.172e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -692,26 +692,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.06e+04   1.14e+04   0.444   0.503
-            5          1.1e+04   1.17e+04   0.165   0.195
-            10        1.07e+04   1.14e+04   0.104   0.123
-            15        1.05e+04   1.11e+04  0.0751  0.0907
+            0         1.07e+04   1.15e+04    0.44   0.502
+            5          1.1e+04   1.17e+04   0.161   0.193
+            10        1.08e+04   1.14e+04   0.101   0.121
+            15        1.05e+04   1.11e+04  0.0746  0.0915
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.06e+04   1.14e+04   0.444   0.503
-            5          1.1e+04   1.17e+04   0.165   0.195
-            10        1.07e+04   1.14e+04   0.104   0.123
-            15        1.05e+04   1.11e+04  0.0751  0.0907
+            0         1.07e+04   1.15e+04    0.44   0.502
+            5          1.1e+04   1.17e+04   0.161   0.193
+            10        1.08e+04   1.14e+04   0.101   0.121
+            15        1.05e+04   1.11e+04  0.0746  0.0915
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 11200.869 K
-            Expected t_inner for next iteration = 10117.443 K
+            Current t_inner = 11205.910 K
+            Expected t_inner for next iteration = 10118.842 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 11200.869 K
-            Expected t_inner for next iteration = 10117.443 K
+            Current t_inner = 11205.910 K
+            Expected t_inner for next iteration = 10118.842 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -726,18 +726,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 11 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   ######################6                                                         11306/40000 [00:00<00:00, 113051.75it/s]
-    Packets:   #############################################5                                  22752/40000 [00:00<00:00, 113870.43it/s]
-    Packets:   ######################################################################3         35180/40000 [00:00<00:00, 118623.16it/s]    Iterations:############################################                                    11/20 [00:05<00:04,  1.85it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################5                                                            9760/40000 [00:00<00:00, 94318.30it/s]
+    Packets:   ######################################5                                         19252/40000 [00:00<00:00, 94664.81it/s]
+    Packets:   #########################################################7                      28874/40000 [00:00<00:00, 95367.63it/s]    Iterations:############################################                                    11/20 [00:06<00:05,  1.60it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 8.668e+42 erg / s
-            Luminosity absorbed  = 2.741e+42 erg / s
+            Luminosity emitted   = 8.662e+42 erg / s
+            Luminosity absorbed  = 2.752e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 8.668e+42 erg / s
-            Luminosity absorbed  = 2.741e+42 erg / s
+            Luminosity emitted   = 8.662e+42 erg / s
+            Luminosity absorbed  = 2.752e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -748,26 +748,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.14e+04   1.06e+04   0.503   0.446
-            5         1.17e+04   1.09e+04   0.195   0.167
-            10        1.14e+04   1.08e+04   0.123   0.101
-            15        1.11e+04   1.04e+04  0.0907  0.0767
+            0         1.15e+04   1.07e+04   0.502   0.445
+            5         1.17e+04    1.1e+04   0.193   0.163
+            10        1.14e+04   1.08e+04   0.121   0.101
+            15        1.11e+04   1.04e+04  0.0915  0.0768
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.14e+04   1.06e+04   0.503   0.446
-            5         1.17e+04   1.09e+04   0.195   0.167
-            10        1.14e+04   1.08e+04   0.123   0.101
-            15        1.11e+04   1.04e+04  0.0907  0.0767
+            0         1.15e+04   1.07e+04   0.502   0.445
+            5         1.17e+04    1.1e+04   0.193   0.163
+            10        1.14e+04   1.08e+04   0.121   0.101
+            15        1.11e+04   1.04e+04  0.0915  0.0768
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 10117.443 K
-            Expected t_inner for next iteration = 11184.241 K
+            Current t_inner = 10118.842 K
+            Expected t_inner for next iteration = 11189.650 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 10117.443 K
-            Expected t_inner for next iteration = 11184.241 K
+            Current t_inner = 10118.842 K
+            Expected t_inner for next iteration = 11189.650 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -782,18 +782,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 12 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #######################7                                                        11864/40000 [00:00<00:00, 113527.16it/s]
-    Packets:   ##############################################4                                 23218/40000 [00:00<00:00, 112948.01it/s]
-    Packets:   #####################################################################1          34586/40000 [00:00<00:00, 113267.80it/s]    Iterations:################################################                                12/20 [00:06<00:04,  1.84it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ####################6                                                           10306/40000 [00:00<00:00, 103030.87it/s]
+    Packets:   #########################################2                                      20610/40000 [00:00<00:00, 100691.12it/s]
+    Packets:   #############################################################3                  30688/40000 [00:00<00:00, 100725.39it/s]    Iterations:################################################                                12/20 [00:07<00:04,  1.61it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 1.286e+43 erg / s
-            Luminosity absorbed  = 4.173e+42 erg / s
+            Luminosity emitted   = 1.284e+43 erg / s
+            Luminosity absorbed  = 4.221e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 1.286e+43 erg / s
-            Luminosity absorbed  = 4.173e+42 erg / s
+            Luminosity emitted   = 1.284e+43 erg / s
+            Luminosity absorbed  = 4.221e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -804,26 +804,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.06e+04   1.15e+04   0.446   0.487
-            5         1.09e+04   1.18e+04   0.167   0.187
-            10        1.08e+04   1.14e+04   0.101   0.119
-            15        1.04e+04   1.11e+04  0.0767  0.0901
+            0         1.07e+04   1.15e+04   0.445   0.485
+            5          1.1e+04   1.18e+04   0.163   0.184
+            10        1.08e+04   1.15e+04   0.101   0.119
+            15        1.04e+04   1.11e+04  0.0768  0.0881
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.06e+04   1.15e+04   0.446   0.487
-            5         1.09e+04   1.18e+04   0.167   0.187
-            10        1.08e+04   1.14e+04   0.101   0.119
-            15        1.04e+04   1.11e+04  0.0767  0.0901
+            0         1.07e+04   1.15e+04   0.445   0.485
+            5          1.1e+04   1.18e+04   0.163   0.184
+            10        1.08e+04   1.15e+04   0.101   0.119
+            15        1.04e+04   1.11e+04  0.0768  0.0881
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 11184.241 K
-            Expected t_inner for next iteration = 10150.684 K
+            Current t_inner = 11189.650 K
+            Expected t_inner for next iteration = 10162.916 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 11184.241 K
-            Expected t_inner for next iteration = 10150.684 K
+            Current t_inner = 11189.650 K
+            Expected t_inner for next iteration = 10162.916 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -839,17 +839,17 @@ Runs the example
             Starting iteration 13 of 20
 
     Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   ######################6                                                         11328/40000 [00:00<00:00, 113093.52it/s]
-    Packets:   #############################################2                                  22638/40000 [00:00<00:00, 112370.74it/s]
-    Packets:   ###################################################################7            33876/40000 [00:00<00:00, 111821.78it/s]    Iterations:####################################################                            13/20 [00:06<00:03,  1.82it/s][tardis.simulation.base][INFO   ]  
+    Packets:   ####################1                                                           10076/40000 [00:00<00:00, 95651.52it/s]
+    Packets:   #######################################5                                        19758/40000 [00:00<00:00, 96323.20it/s]
+    Packets:   ##########################################################8                     29440/40000 [00:00<00:00, 96546.99it/s]    Iterations:####################################################                            13/20 [00:07<00:04,  1.61it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 8.780e+42 erg / s
-            Luminosity absorbed  = 2.778e+42 erg / s
+            Luminosity emitted   = 8.811e+42 erg / s
+            Luminosity absorbed  = 2.801e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 8.780e+42 erg / s
-            Luminosity absorbed  = 2.778e+42 erg / s
+            Luminosity emitted   = 8.811e+42 erg / s
+            Luminosity absorbed  = 2.801e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -860,26 +860,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.15e+04   1.07e+04   0.487   0.438
-            5         1.18e+04   1.11e+04   0.187   0.162
-            10        1.14e+04   1.09e+04   0.119  0.0991
-            15        1.11e+04   1.05e+04  0.0901  0.0771
+            0         1.15e+04   1.07e+04   0.485   0.442
+            5         1.18e+04   1.11e+04   0.184   0.161
+            10        1.15e+04   1.09e+04   0.119     0.1
+            15        1.11e+04   1.05e+04  0.0881  0.0771
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.15e+04   1.07e+04   0.487   0.438
-            5         1.18e+04   1.11e+04   0.187   0.162
-            10        1.14e+04   1.09e+04   0.119  0.0991
-            15        1.11e+04   1.05e+04  0.0901  0.0771
+            0         1.15e+04   1.07e+04   0.485   0.442
+            5         1.18e+04   1.11e+04   0.184   0.161
+            10        1.15e+04   1.09e+04   0.119     0.1
+            15        1.11e+04   1.05e+04  0.0881  0.0771
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 10150.684 K
-            Expected t_inner for next iteration = 11149.295 K
+            Current t_inner = 10162.916 K
+            Expected t_inner for next iteration = 11143.134 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 10150.684 K
-            Expected t_inner for next iteration = 11149.295 K
+            Current t_inner = 10162.916 K
+            Expected t_inner for next iteration = 11143.134 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -894,18 +894,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 14 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   ######################3                                                         11184/40000 [00:00<00:00, 111389.43it/s]
-    Packets:   #############################################3                                  22686/40000 [00:00<00:00, 113518.71it/s]
-    Packets:   ####################################################################            34040/40000 [00:00<00:00, 113371.87it/s]    Iterations:########################################################                        14/20 [00:07<00:03,  1.81it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ####################1                                                           10096/40000 [00:00<00:00, 100672.79it/s]
+    Packets:   ########################################3                                       20164/40000 [00:00<00:00, 100252.55it/s]
+    Packets:   ############################################################3                   30190/40000 [00:00<00:00, 96198.99it/s]     Iterations:########################################################                        14/20 [00:08<00:03,  1.61it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 1.273e+43 erg / s
-            Luminosity absorbed  = 4.090e+42 erg / s
+            Luminosity emitted   = 1.268e+43 erg / s
+            Luminosity absorbed  = 4.103e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 1.273e+43 erg / s
-            Luminosity absorbed  = 4.090e+42 erg / s
+            Luminosity emitted   = 1.268e+43 erg / s
+            Luminosity absorbed  = 4.103e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -916,26 +916,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.07e+04   1.15e+04   0.438   0.488
-            5         1.11e+04   1.16e+04   0.162   0.192
-            10        1.09e+04   1.14e+04  0.0991   0.119
-            15        1.05e+04    1.1e+04  0.0771  0.0905
+            0         1.07e+04   1.15e+04   0.442  0.486 
+            5         1.11e+04   1.17e+04   0.161  0.191 
+            10        1.09e+04   1.13e+04     0.1  0.122 
+            15        1.05e+04    1.1e+04  0.0771  0.092 
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.07e+04   1.15e+04   0.438   0.488
-            5         1.11e+04   1.16e+04   0.162   0.192
-            10        1.09e+04   1.14e+04  0.0991   0.119
-            15        1.05e+04    1.1e+04  0.0771  0.0905
+            0         1.07e+04   1.15e+04   0.442  0.486 
+            5         1.11e+04   1.17e+04   0.161  0.191 
+            10        1.09e+04   1.13e+04     0.1  0.122 
+            15        1.05e+04    1.1e+04  0.0771  0.092 
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 11149.295 K
-            Expected t_inner for next iteration = 10168.484 K
+            Current t_inner = 11143.134 K
+            Expected t_inner for next iteration = 10182.896 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 11149.295 K
-            Expected t_inner for next iteration = 10168.484 K
+            Current t_inner = 11143.134 K
+            Expected t_inner for next iteration = 10182.896 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -950,18 +950,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 15 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   ######################6                                                         11338/40000 [00:00<00:00, 111865.73it/s]
-    Packets:   #############################################1                                  22570/40000 [00:00<00:00, 112130.12it/s]
-    Packets:   #####################################################################9          34994/40000 [00:00<00:00, 117633.75it/s]    Iterations:############################################################                    15/20 [00:07<00:02,  1.81it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################2                                                            9638/40000 [00:00<00:00, 90878.79it/s]
+    Packets:   #####################################4                                          18748/40000 [00:00<00:00, 91000.44it/s]
+    Packets:   #######################################################7                        27850/40000 [00:00<00:00, 89987.65it/s]    Iterations:############################################################                    15/20 [00:09<00:03,  1.59it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 8.799e+42 erg / s
-            Luminosity absorbed  = 2.839e+42 erg / s
+            Luminosity emitted   = 8.851e+42 erg / s
+            Luminosity absorbed  = 2.855e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 8.799e+42 erg / s
-            Luminosity absorbed  = 2.839e+42 erg / s
+            Luminosity emitted   = 8.851e+42 erg / s
+            Luminosity absorbed  = 2.855e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -971,27 +971,27 @@ Runs the example
             Plasma stratification:
     [tardis.simulation.base][INFO   ]  
         
-            Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.15e+04   1.06e+04   0.488   0.457
-            5         1.16e+04    1.1e+04   0.192   0.166
-            10        1.14e+04   1.09e+04   0.119   0.101
-            15         1.1e+04   1.04e+04  0.0905  0.0794
+            Shell No.   t_rad   next_t_rad    w   next_w
+            0         1.15e+04   1.07e+04  0.486   0.455
+            5         1.17e+04   1.11e+04  0.191   0.159
+            10        1.13e+04   1.09e+04  0.122   0.101
+            15         1.1e+04   1.05e+04  0.092  0.0774
      (base.py:540)
     INFO:tardis.simulation.base:
-            Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.15e+04   1.06e+04   0.488   0.457
-            5         1.16e+04    1.1e+04   0.192   0.166
-            10        1.14e+04   1.09e+04   0.119   0.101
-            15         1.1e+04   1.04e+04  0.0905  0.0794
+            Shell No.   t_rad   next_t_rad    w   next_w
+            0         1.15e+04   1.07e+04  0.486   0.455
+            5         1.17e+04   1.11e+04  0.191   0.159
+            10        1.13e+04   1.09e+04  0.122   0.101
+            15         1.1e+04   1.05e+04  0.092  0.0774
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 10168.484 K
-            Expected t_inner for next iteration = 11156.865 K
+            Current t_inner = 10182.896 K
+            Expected t_inner for next iteration = 11140.047 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 10168.484 K
-            Expected t_inner for next iteration = 11156.865 K
+            Current t_inner = 10182.896 K
+            Expected t_inner for next iteration = 11140.047 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -1006,18 +1006,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 16 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   ########################5                                                       12272/40000 [00:00<00:00, 122716.90it/s]
-    Packets:   #################################################                               24544/40000 [00:00<00:00, 119335.08it/s]
-    Packets:   ########################################################################9       36484/40000 [00:00<00:00, 118351.24it/s]    Iterations:################################################################                16/20 [00:08<00:02,  1.82it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ####################4                                                           10206/40000 [00:00<00:00, 102035.04it/s]
+    Packets:   ########################################8                                       20412/40000 [00:00<00:00, 102044.20it/s]
+    Packets:   #############################################################2                  30618/40000 [00:00<00:00, 100481.93it/s]    Iterations:################################################################                16/20 [00:09<00:02,  1.60it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 1.269e+43 erg / s
-            Luminosity absorbed  = 4.174e+42 erg / s
+            Luminosity emitted   = 1.264e+43 erg / s
+            Luminosity absorbed  = 4.123e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 1.269e+43 erg / s
-            Luminosity absorbed  = 4.174e+42 erg / s
+            Luminosity emitted   = 1.264e+43 erg / s
+            Luminosity absorbed  = 4.123e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -1028,26 +1028,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.06e+04   1.14e+04   0.457   0.494
-            5          1.1e+04   1.17e+04   0.166   0.186
+            0         1.07e+04   1.14e+04   0.455   0.499
+            5         1.11e+04   1.16e+04   0.159    0.19
             10        1.09e+04   1.14e+04   0.101   0.119
-            15        1.04e+04    1.1e+04  0.0794  0.0903
+            15        1.05e+04   1.11e+04  0.0774  0.0885
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.06e+04   1.14e+04   0.457   0.494
-            5          1.1e+04   1.17e+04   0.166   0.186
+            0         1.07e+04   1.14e+04   0.455   0.499
+            5         1.11e+04   1.16e+04   0.159    0.19
             10        1.09e+04   1.14e+04   0.101   0.119
-            15        1.04e+04    1.1e+04  0.0794  0.0903
+            15        1.05e+04   1.11e+04  0.0774  0.0885
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 11156.865 K
-            Expected t_inner for next iteration = 10192.704 K
+            Current t_inner = 11140.047 K
+            Expected t_inner for next iteration = 10197.903 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 11156.865 K
-            Expected t_inner for next iteration = 10192.704 K
+            Current t_inner = 11140.047 K
+            Expected t_inner for next iteration = 10197.903 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -1063,17 +1063,17 @@ Runs the example
             Starting iteration 17 of 20
 
     Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #######################6                                                        11840/40000 [00:00<00:00, 114265.18it/s]
-    Packets:   ##############################################8                                 23418/40000 [00:00<00:00, 115139.57it/s]
-    Packets:   ######################################################################4         35244/40000 [00:00<00:00, 116550.87it/s]    Iterations:####################################################################            17/20 [00:09<00:01,  1.83it/s][tardis.simulation.base][INFO   ]  
+    Packets:   ####################1                                                           10052/40000 [00:00<00:00, 92926.34it/s]
+    Packets:   #######################################5                                        19764/40000 [00:00<00:00, 95305.83it/s]
+    Packets:   ##########################################################6                     29304/40000 [00:00<00:00, 94562.39it/s]    Iterations:####################################################################            17/20 [00:10<00:01,  1.59it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 8.909e+42 erg / s
-            Luminosity absorbed  = 2.843e+42 erg / s
+            Luminosity emitted   = 8.950e+42 erg / s
+            Luminosity absorbed  = 2.827e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 8.909e+42 erg / s
-            Luminosity absorbed  = 2.843e+42 erg / s
+            Luminosity emitted   = 8.950e+42 erg / s
+            Luminosity absorbed  = 2.827e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -1084,26 +1084,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.14e+04   1.07e+04   0.494   0.448
-            5         1.17e+04   1.11e+04   0.186   0.165
-            10        1.14e+04   1.09e+04   0.119   0.101
-            15         1.1e+04   1.05e+04  0.0903  0.0761
+            0         1.14e+04   1.07e+04   0.499   0.448
+            5         1.16e+04   1.11e+04    0.19   0.166
+            10        1.14e+04   1.09e+04   0.119   0.102
+            15        1.11e+04   1.05e+04  0.0885  0.0775
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.14e+04   1.07e+04   0.494   0.448
-            5         1.17e+04   1.11e+04   0.186   0.165
-            10        1.14e+04   1.09e+04   0.119   0.101
-            15         1.1e+04   1.05e+04  0.0903  0.0761
+            0         1.14e+04   1.07e+04   0.499   0.448
+            5         1.16e+04   1.11e+04    0.19   0.166
+            10        1.14e+04   1.09e+04   0.119   0.102
+            15        1.11e+04   1.05e+04  0.0885  0.0775
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 10192.704 K
-            Expected t_inner for next iteration = 11114.088 K
+            Current t_inner = 10197.903 K
+            Expected t_inner for next iteration = 11094.504 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 10192.704 K
-            Expected t_inner for next iteration = 11114.088 K
+            Current t_inner = 10197.903 K
+            Expected t_inner for next iteration = 11094.504 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -1118,18 +1118,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 18 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #######################3                                                        11658/40000 [00:00<00:00, 116561.21it/s]
-    Packets:   ##############################################6                                 23316/40000 [00:00<00:00, 116072.12it/s]
-    Packets:   #######################################################################6        35844/40000 [00:00<00:00, 120263.05it/s]    Iterations:########################################################################        18/20 [00:09<00:01,  1.84it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################1                                                            9586/40000 [00:00<00:00, 95848.21it/s]
+    Packets:   ######################################7                                         19372/40000 [00:00<00:00, 97023.99it/s]
+    Packets:   ##########################################################1                     29092/40000 [00:00<00:00, 97103.45it/s]    Iterations:########################################################################        18/20 [00:11<00:01,  1.60it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 1.253e+43 erg / s
-            Luminosity absorbed  = 4.078e+42 erg / s
+            Luminosity emitted   = 1.244e+43 erg / s
+            Luminosity absorbed  = 4.056e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 1.253e+43 erg / s
-            Luminosity absorbed  = 4.078e+42 erg / s
+            Luminosity emitted   = 1.244e+43 erg / s
+            Luminosity absorbed  = 4.056e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -1140,26 +1140,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.07e+04   1.14e+04   0.448   0.489
-            5         1.11e+04   1.16e+04   0.165   0.189
-            10        1.09e+04   1.14e+04   0.101   0.119
-            15        1.05e+04    1.1e+04  0.0761  0.0896
+            0         1.07e+04   1.14e+04   0.448   0.495
+            5         1.11e+04   1.16e+04   0.166    0.19
+            10        1.09e+04   1.13e+04   0.102   0.122
+            15        1.05e+04   1.09e+04  0.0775  0.0916
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.07e+04   1.14e+04   0.448   0.489
-            5         1.11e+04   1.16e+04   0.165   0.189
-            10        1.09e+04   1.14e+04   0.101   0.119
-            15        1.05e+04    1.1e+04  0.0761  0.0896
+            0         1.07e+04   1.14e+04   0.448   0.495
+            5         1.11e+04   1.16e+04   0.166    0.19
+            10        1.09e+04   1.13e+04   0.102   0.122
+            15        1.05e+04   1.09e+04  0.0775  0.0916
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 11114.088 K
-            Expected t_inner for next iteration = 10219.070 K
+            Current t_inner = 11094.504 K
+            Expected t_inner for next iteration = 10238.200 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 11114.088 K
-            Expected t_inner for next iteration = 10219.070 K
+            Current t_inner = 11094.504 K
+            Expected t_inner for next iteration = 10238.200 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -1174,17 +1174,18 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 19 of 20
 
-    Packets:                                                                                   0/40000 [00:00<?, ?it/s]                
-    Packets:   #############################7                                                  14884/40000 [00:00<00:00, 148836.95it/s]
-    Packets:   ###########################################################5                    29768/40000 [00:00<00:00, 130160.26it/s]    Iterations:############################################################################    19/20 [00:10<00:00,  1.86it/s][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/40000 [00:00<?, ?it/s]               
+    Packets:   ###################4                                                            9712/40000 [00:00<00:00, 93131.32it/s]
+    Packets:   ######################################                                          19026/40000 [00:00<00:00, 92777.73it/s]
+    Packets:   ########################################################7                       28398/40000 [00:00<00:00, 93200.64it/s]    Iterations:############################################################################    19/20 [00:11<00:00,  1.60it/s][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 9.010e+42 erg / s
-            Luminosity absorbed  = 2.865e+42 erg / s
+            Luminosity emitted   = 9.055e+42 erg / s
+            Luminosity absorbed  = 2.909e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 9.010e+42 erg / s
-            Luminosity absorbed  = 2.865e+42 erg / s
+            Luminosity emitted   = 9.055e+42 erg / s
+            Luminosity absorbed  = 2.909e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
@@ -1195,26 +1196,26 @@ Runs the example
     [tardis.simulation.base][INFO   ]  
         
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.14e+04   1.08e+04   0.489   0.444
-            5         1.16e+04   1.12e+04   0.189    0.16
-            10        1.14e+04    1.1e+04   0.119  0.0985
-            15         1.1e+04   1.05e+04  0.0896  0.0773
+            0         1.14e+04   1.08e+04   0.495   0.447
+            5         1.16e+04   1.11e+04    0.19   0.165
+            10        1.13e+04   1.09e+04   0.122   0.103
+            15        1.09e+04   1.04e+04  0.0916  0.0794
      (base.py:540)
     INFO:tardis.simulation.base:
             Shell No.   t_rad   next_t_rad    w    next_w
-            0         1.14e+04   1.08e+04   0.489   0.444
-            5         1.16e+04   1.12e+04   0.189    0.16
-            10        1.14e+04    1.1e+04   0.119  0.0985
-            15         1.1e+04   1.05e+04  0.0896  0.0773
+            0         1.14e+04   1.08e+04   0.495   0.447
+            5         1.16e+04   1.11e+04    0.19   0.165
+            10        1.13e+04   1.09e+04   0.122   0.103
+            15        1.09e+04   1.04e+04  0.0916  0.0794
 
     [tardis.simulation.base][INFO   ]  
         
-            Current t_inner = 10219.070 K
-            Expected t_inner for next iteration = 11080.282 K
+            Current t_inner = 10238.200 K
+            Expected t_inner for next iteration = 11073.533 K
      (base.py:542)
     INFO:tardis.simulation.base:
-            Current t_inner = 10219.070 K
-            Expected t_inner for next iteration = 11080.282 K
+            Current t_inner = 10238.200 K
+            Expected t_inner for next iteration = 11073.533 K
 
     [py.warnings         ][WARNING]  
             /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
@@ -1229,48 +1230,52 @@ Runs the example
     INFO:tardis.simulation.base:
             Starting iteration 20 of 20
 
-    Packets:                                                                                   0/100000 [00:00<?, ?it/s]               
-    Packets:   ##########5                                                                     13168/100000 [00:00<00:02, 35102.44it/s]
-    Packets:   #############3                                                                  16680/100000 [00:00<00:02, 34473.46it/s]
-    Packets:   ################                                                                20064/100000 [00:00<00:02, 33469.25it/s]
-    Packets:   ##################6                                                             23322/100000 [00:00<00:02, 33193.97it/s]
-    Packets:   #####################4                                                          26842/100000 [00:00<00:02, 33764.53it/s]
-    Packets:   ########################1                                                       30194/100000 [00:00<00:02, 33600.37it/s]
-    Packets:   ##########################9                                                     33636/100000 [00:00<00:01, 33838.78it/s]
-    Packets:   #############################6                                                  37034/100000 [00:01<00:01, 33878.45it/s]
-    Packets:   ################################4                                               40536/100000 [00:01<00:01, 34212.74it/s]
-    Packets:   ###################################2                                            44058/100000 [00:01<00:01, 34470.78it/s]
-    Packets:   ######################################                                          47520/100000 [00:01<00:01, 34512.61it/s]
-    Packets:   ########################################8                                       51104/100000 [00:01<00:01, 34906.58it/s]
-    Packets:   ###########################################6                                    54596/100000 [00:01<00:01, 34462.19it/s]
-    Packets:   ##############################################6                                 58280/100000 [00:01<00:01, 35164.51it/s]
-    Packets:   #################################################4                              61800/100000 [00:01<00:01, 34880.48it/s]
-    Packets:   ####################################################2                           65290/100000 [00:01<00:00, 34881.86it/s]
-    Packets:   #######################################################                         68870/100000 [00:01<00:00, 35150.01it/s]
-    Packets:   #########################################################9                      72388/100000 [00:02<00:00, 34677.41it/s]
-    Packets:   ############################################################7                   75996/100000 [00:02<00:00, 35092.14it/s]
-    Packets:   ###############################################################6                79554/100000 [00:02<00:00, 35235.45it/s]
-    Packets:   ##################################################################4             83080/100000 [00:02<00:00, 34897.54it/s]
-    Packets:   #####################################################################2          86572/100000 [00:02<00:00, 34456.29it/s]
-    Packets:   ##########################################################################5     93230/100000 [00:02<00:00, 43927.35it/s]    Iterations:################################################################################20/20 [00:13<00:00,  1.33s/it][tardis.simulation.base][INFO   ]  
+    Packets:                                                                                   0/100000 [00:00<?, ?it/s]              
+    Packets:   #######4                                                                        9322/100000 [00:00<00:02, 33657.49it/s]
+    Packets:   ##########1                                                                     12688/100000 [00:00<00:02, 33419.22it/s]
+    Packets:   ############8                                                                   16014/100000 [00:00<00:02, 32889.97it/s]
+    Packets:   ###############4                                                                19276/100000 [00:00<00:02, 32674.81it/s]
+    Packets:   ##################                                                              22546/100000 [00:00<00:02, 32682.29it/s]
+    Packets:   ####################6                                                           25802/100000 [00:00<00:02, 32336.64it/s]
+    Packets:   #######################2                                                        29102/100000 [00:00<00:02, 32531.54it/s]
+    Packets:   #########################8                                                      32350/100000 [00:00<00:02, 32322.86it/s]
+    Packets:   ############################5                                                   35626/100000 [00:01<00:01, 32446.23it/s]
+    Packets:   ###############################1                                                38942/100000 [00:01<00:01, 32646.13it/s]
+    Packets:   #################################7                                              42206/100000 [00:01<00:01, 32382.39it/s]
+    Packets:   ####################################4                                           45518/100000 [00:01<00:01, 32601.92it/s]
+    Packets:   #######################################                                         48778/100000 [00:01<00:01, 32363.12it/s]
+    Packets:   #########################################6                                      52016/100000 [00:01<00:01, 32291.06it/s]
+    Packets:   ############################################2                                   55370/100000 [00:01<00:01, 32659.64it/s]
+    Packets:   ##############################################9                                 58638/100000 [00:01<00:01, 32633.12it/s]
+    Packets:   #################################################5                              61902/100000 [00:01<00:01, 32175.21it/s]
+    Packets:   ####################################################                            65122/100000 [00:02<00:01, 32109.52it/s]
+    Packets:   ######################################################8                         68522/100000 [00:02<00:00, 32669.39it/s]
+    Packets:   #########################################################4                      71792/100000 [00:02<00:00, 32674.15it/s]
+    Packets:   ############################################################                    75062/100000 [00:02<00:00, 32184.25it/s]
+    Packets:   ##############################################################6                 78338/100000 [00:02<00:00, 32347.12it/s]
+    Packets:   #################################################################3              81654/100000 [00:02<00:00, 32584.92it/s]
+    Packets:   ###################################################################9            84914/100000 [00:02<00:00, 32274.61it/s]
+    Packets:   ######################################################################5         88178/100000 [00:02<00:00, 32374.67it/s]
+    Packets:   #########################################################################5      91932/100000 [00:02<00:00, 33905.43it/s]
+    Packets:   ##############################################################################  97546/100000 [00:02<00:00, 40532.17it/s]    Iterations:################################################################################20/20 [00:15<00:00,  1.48s/it][tardis.simulation.base][INFO   ]  
         
-            Luminosity emitted   = 1.238e+43 erg / s
-            Luminosity absorbed  = 4.023e+42 erg / s
+            Luminosity emitted   = 1.235e+43 erg / s
+            Luminosity absorbed  = 4.021e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
      (base.py:547)
     INFO:tardis.simulation.base:
-            Luminosity emitted   = 1.238e+43 erg / s
-            Luminosity absorbed  = 4.023e+42 erg / s
+            Luminosity emitted   = 1.235e+43 erg / s
+            Luminosity absorbed  = 4.021e+42 erg / s
             Luminosity requested = 1.059e+43 erg / s
 
     [tardis.simulation.base][INFO   ]  
         
             Simulation finished in 20 iterations 
-            Simulation took 33.66 s
+            Simulation took 40.75 s
      (base.py:468)
     INFO:tardis.simulation.base:
             Simulation finished in 20 iterations 
-            Simulation took 33.66 s
+            Simulation took 40.75 s
 
 
 
@@ -1314,14 +1319,14 @@ Runs the example
     /home/runner/work/tardis-setups/tardis-setups/tardis/tardis/montecarlo/montecarlo_numba/formal_integral.py:356: UserWarning: The number of interpolate_shells was not specified. The value was set to 80.
       warnings.warn(
 
-    Packets:   ################################################################################100000/100000 [00:20<00:00, 43927.35it/s]
+    Packets:   ################################################################################100000/100000 [00:21<00:00, 40532.17it/s]
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  31.745 seconds)
+   **Total running time of the script:** ( 1 minutes  53.802 seconds)
 
 
 .. _sphx_glr_download_2014_examples_plot_tardis_example.py:
