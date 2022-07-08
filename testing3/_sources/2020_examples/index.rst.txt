@@ -13,12 +13,12 @@ Output of configuartion files uploaded in the year 2020.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The following result is obtained using the configuration file from the paper Williamson, Marc, ...">
+    <div class="sphx-glr-thumbcontainer" tooltip=" Article: Williamson, Marc, Kerzendorf, Wolfgang, Modjaz, Maryam 2021, ApJ, “Modeling Type Ic S...">
 
 .. only:: html
 
  .. figure:: /2020_examples/images/thumb/sphx_glr_plot_16d_thumb.png
-     :alt: SN 1994I spectra 16 days post Explosion
+     :alt: Williamson et al. (2020) Figure 2 t_explosion=16 days
 
      :ref:`sphx_glr_2020_examples_plot_16d.py`
 

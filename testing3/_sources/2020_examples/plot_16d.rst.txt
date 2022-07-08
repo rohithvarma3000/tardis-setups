@@ -18,18 +18,28 @@
 .. _sphx_glr_2020_examples_plot_16d.py:
 
 
-SN 1994I spectra 16 days post Explosion
+Williamson et al. (2020) Figure 2 t_explosion=16 days
 ==========================
 
-The following result is obtained using the configuration file from the paper
-Williamson, Marc, Kerzendorf, Wolfgang, Modjaz, Maryam 2021, ApJ,
+
+Article: Williamson, Marc, Kerzendorf, Wolfgang, Modjaz, Maryam 2021, ApJ,
 “Modeling Type Ic Supernovae with TARDIS: Hidden Helium in SN 1994I?” (`ADS Link`_).
-This plot shows the output obtained by TARDIS for the SN 1994I spectra 16 days post explosion.
-Please refer figure 2 from the paper to compare the results of the paper.
+
+Original Input Files: `YAML`_, `CSVY`_
+
+Original Dataset: Data missing
+
+Original Spectra:
+
+Notes: Please note that the spectra obtained below is obtained by using a slightly
+modified configuration file. This is done to ensure that the spectra can be
+obtained using the computers hosted by us.
 
 .. _ADS Link: https://ui.adsabs.harvard.edu/abs/2021ApJ...908..150W
+.. _YAML: https://github.com/tardis-sn/tardis-setups/blob/master/2020/2020_williamson_94I/code_comp_setups/16d.yml
+.. _CSVY: https://github.com/tardis-sn/tardis-setups/blob/master/2020/2020_williamson_94I/code_comp_setups/hach_exact_csvy_16d.csvy
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-25
+.. GENERATED FROM PYTHON SOURCE LINES 23-35
 
 .. code-block:: default
 
@@ -52,11 +62,11 @@ Please refer figure 2 from the paper to compare the results of the paper.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-27
+.. GENERATED FROM PYTHON SOURCE LINES 36-37
 
 Comment this line if you do not need to download the dataset.
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-31
+.. GENERATED FROM PYTHON SOURCE LINES 37-41
 
 .. code-block:: default
 
@@ -71,7 +81,7 @@ Comment this line if you do not need to download the dataset.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-36
+.. GENERATED FROM PYTHON SOURCE LINES 42-46
 
 .. code-block:: default
 
@@ -86,12 +96,12 @@ Comment this line if you do not need to download the dataset.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-39
+.. GENERATED FROM PYTHON SOURCE LINES 47-49
 
 Note: Here the configuration is slightly modified to allow
 the configuration file on a computer with lower configuration.
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-41
+.. GENERATED FROM PYTHON SOURCE LINES 49-51
 
 .. code-block:: default
 
@@ -104,7 +114,7 @@ the configuration file on a computer with lower configuration.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-61
+.. GENERATED FROM PYTHON SOURCE LINES 52-71
 
 .. code-block:: default
 
@@ -155,7 +165,7 @@ the configuration file on a computer with lower configuration.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 8 minutes  21.531 seconds)
+   **Total running time of the script:** ( 7 minutes  53.856 seconds)
 
 
 .. _sphx_glr_download_2020_examples_plot_16d.py:
