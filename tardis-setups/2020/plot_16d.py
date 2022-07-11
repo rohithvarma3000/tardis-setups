@@ -8,9 +8,9 @@ Article: Williamson, Marc, Kerzendorf, Wolfgang, Modjaz, Maryam 2021, ApJ,
 
 Original Input Files: `YAML`_, `CSVY`_
 
-Original Dataset: Data missing
+Original Atomic Dataset: Data missing
 
-Original Spectra:
+Original Spectra: Data missing
 
 Notes: Please note that the spectra obtained below is obtained by using a slightly
 modified configuration file. This is done to ensure that the spectra can be
@@ -68,3 +68,4 @@ plt.xlabel("Wavelength [$\AA$]")
 plt.ylabel("Luminosity density [erg/s/$\AA$]")
 plt.legend()
 plt.show()
+
