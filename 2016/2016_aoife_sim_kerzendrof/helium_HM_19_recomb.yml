@@ -10,13 +10,13 @@ atom_data: https://zenodo.org/record/6787804/files/aoife_atomic_data_onlylevelli
 model:
   structure:
     type: file
-    filename: /Users/boyle/tardis/HM_model.txt
+    filename: HM_model.txt
     filetype: artis
     v_inner_boundary: 9400 km/s
     v_outer_boundary: 30000 km/s
   abundances:
     type: file
-    filename: /Users/boyle/tardis/HM_abundances.txt
+    filename: HM_abundances.txt
     filetype: simple_ascii
 
 plasma:
