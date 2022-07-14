@@ -166,7 +166,7 @@ the configuration file on a computer with lower configuration.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 8 minutes  17.147 seconds)
+   **Total running time of the script:** ( 8 minutes  36.470 seconds)
 
 
 .. _sphx_glr_download_2020_examples_plot_16d.py:
