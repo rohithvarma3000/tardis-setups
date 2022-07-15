@@ -8,7 +8,7 @@ Article: Boyle, Aoife, Sim, Stuart A., Hachinger, Stephan, et al. 2017, A&A,
 
 Original Input Files: `YAML`_, `Model`_, `Abundance`_
 
-Original Atomic Dataset: Data missing
+Original Atomic Dataset: Data present
 
 Original Spectra: Data missing
 
