@@ -54,7 +54,7 @@ jobs:
       - name: Create the documentation
         run: |
           cd setups/
-          sphinx-build -b html docs/ html/
+          sphinx-build -P -b html docs/ html/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
