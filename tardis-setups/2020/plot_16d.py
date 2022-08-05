@@ -69,7 +69,7 @@ from astropy import units as u
 
 conversion = 4 * np.pi * 9.55 * 9.55 * u.Mpc.to(u.cm) ** 2.0
 
-plt.plot(t1[0], t1[1] * conversion)
+plt.plot(t1[0], t1[1] * conversion, label="Original result", color="black")
 
 plt.xlim(500, 9000)
 plt.title("TARDIS example model spectrum")
