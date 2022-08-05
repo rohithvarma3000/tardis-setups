@@ -73,7 +73,6 @@ plt.show()
 import numpy as np
 
 t1 = np.loadtxt("codecomp_spectra.txt", unpack=True)
-t1 = t1.transpose()
 print(t1)
 from astropy import units as u
 
