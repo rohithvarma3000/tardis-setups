@@ -1,5 +1,5 @@
 """
-Williamson et al. (2020) Figure 2 t_explosion=22 days
+Williamson et al. (2020) Figure 2 t_explosion=40 days
 ==========================
 
 
@@ -17,9 +17,10 @@ modified configuration file. This is done to ensure that the spectra can be
 obtained using the computers hosted by us.
 
 .. _ADS Link: https://ui.adsabs.harvard.edu/abs/2021ApJ...908..150W
-.. _YAML: https://github.com/tardis-sn/tardis-setups/blob/master/2020/2020_williamson_94I/code_comp_setups/22d.yml
-.. _CSVY: https://github.com/tardis-sn/tardis-setups/blob/master/2020/2020_williamson_94I/code_comp_setups/hach_exact_csvy_22d.csvy
+.. _YAML: https://github.com/tardis-sn/tardis-setups/blob/master/2020/2020_williamson_94I/code_comp_setups/40d.yml
+.. _CSVY: https://github.com/tardis-sn/tardis-setups/blob/master/2020/2020_williamson_94I/code_comp_setups/hach_exact_csvy_40d.csvy
 """
+
 
 from tardis import run_tardis
 from tardis.io.config_reader import Configuration
@@ -41,7 +42,7 @@ download_atom_data("kurucz_cd23_chianti_H_He")
 # Runs the example
 
 conf = Configuration.from_yaml(
-    "../../2020/2020_williamson_94I/code_comp_setups/22d.yml"
+    "../../2020/2020_williamson_94I/code_comp_setups/40d.yml"
 )
 conf = config_modifier(conf)
 # %%
@@ -50,13 +51,24 @@ sim = run_tardis(conf)
 
 spectrum = sim.runner.spectrum
 spectrum_virtual = sim.runner.spectrum_virtual
-spectrum_integrated = sim.runner.spectrum_integrated
+# spectrum_integrated = sim.runner.spectrum_integrated
 
 plt.figure(figsize=(10, 6.5))
 
 spectrum.plot(label="Normal packets")
 spectrum_virtual.plot(label="Virtual packets")
-spectrum_integrated.plot(label="Formal integral")
+# spectrum_integrated.plot(label="Formal integral")
+
+import numpy as np
+
+t1 = np.loadtxt("codecomp_spectra.txt", unpack=True)
+print(t1)
+from astropy import units as u
+
+conversion = 4 * np.pi * 9.55 * 9.55 * u.Mpc.to(u.cm) ** 2.0
+
+plt.plot(t1[0], t1[4] * conversion, label="Original result", color="black")
+
 
 plt.xlim(500, 9000)
 plt.title("TARDIS example model spectrum")
