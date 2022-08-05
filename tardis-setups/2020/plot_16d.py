@@ -74,11 +74,11 @@ import numpy as np
 
 t1 = np.loadtxt("codecomp_spectra.txt", unpack=True)
 t1 = t1.transpose()
-
+print(t1)
 from astropy import units as u
 
 conversion = 4 * np.pi * 9.55 * 9.55 * u.Mpc.to(u.cm) ** 2.0
 
-plt.plot(t1[0], t1[2] * conversion)
+plt.plot(t1[0], t1[1] * conversion)
 plt.xlim(0, 9000)
 plt.show()
