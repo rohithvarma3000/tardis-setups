@@ -61,15 +61,6 @@ plt.figure(figsize=(10, 6.5))
 spectrum.plot(label="Normal packets")
 spectrum_virtual.plot(label="Virtual packets")
 spectrum_integrated.plot(label="Formal integral")
-
-plt.xlim(500, 9000)
-plt.title("TARDIS example model spectrum")
-plt.xlabel("Wavelength [$\AA$]")
-plt.ylabel("Luminosity density [erg/s/$\AA$]")
-plt.legend()
-plt.show()
-
-# %%
 import numpy as np
 
 t1 = np.loadtxt("codecomp_spectra.txt", unpack=True)
@@ -79,5 +70,10 @@ from astropy import units as u
 conversion = 4 * np.pi * 9.55 * 9.55 * u.Mpc.to(u.cm) ** 2.0
 
 plt.plot(t1[0], t1[1] * conversion)
-plt.xlim(0, 9000)
+
+plt.xlim(500, 9000)
+plt.title("TARDIS example model spectrum")
+plt.xlabel("Wavelength [$\AA$]")
+plt.ylabel("Luminosity density [erg/s/$\AA$]")
+plt.legend()
 plt.show()
