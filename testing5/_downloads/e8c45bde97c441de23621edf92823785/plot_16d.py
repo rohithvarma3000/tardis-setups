@@ -69,3 +69,8 @@ plt.ylabel("Luminosity density [erg/s/$\AA$]")
 plt.legend()
 plt.show()
 
+# %%
+import numpy as np
+
+t1 = np.loadtxt("codecomp_spectra.txt", unpack=True)
+t1 = t1.transpose()
