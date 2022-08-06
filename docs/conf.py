@@ -33,10 +33,10 @@ extensions = [
 
 sphinx_gallery_conf = {
     "examples_dirs": [
-        "../tardis-setups/2020",
+        "../tardis-setups/2016",
     ],  # path to your example scripts
     "gallery_dirs": [
-        "2020_examples",
+        "2016_examples",
     ],  # path to where to save gallery generated output
 }
 
