@@ -17,6 +17,69 @@ Output of configuartion files uploaded in the year 2020.
 
 .. only:: html
 
+ .. figure:: /2020_examples/images/thumb/sphx_glr_plot_22d_he_10_thumb.png
+     :alt: Williamson et al. (2020) Figure 3 g He=0.10M⊙
+
+     :ref:`sphx_glr_2020_examples_plot_22d_he_10.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /2020_examples/plot_22d_he_10
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip=" Article: Williamson, Marc, Kerzendorf, Wolfgang, Modjaz, Maryam 2021, ApJ, “Modeling Type Ic S...">
+
+.. only:: html
+
+ .. figure:: /2020_examples/images/thumb/sphx_glr_plot_22d_he_05_thumb.png
+     :alt: Williamson et al. (2020) Figure 3 g He=0.05M⊙
+
+     :ref:`sphx_glr_2020_examples_plot_22d_he_05.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /2020_examples/plot_22d_he_05
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip=" Article: Williamson, Marc, Kerzendorf, Wolfgang, Modjaz, Maryam 2021, ApJ, “Modeling Type Ic S...">
+
+.. only:: html
+
+ .. figure:: /2020_examples/images/thumb/sphx_glr_plot_22d_he_01_thumb.png
+     :alt: Williamson et al. (2020) Figure 3 g He=0.01M⊙
+
+     :ref:`sphx_glr_2020_examples_plot_22d_he_01.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /2020_examples/plot_22d_he_01
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip=" Article: Williamson, Marc, Kerzendorf, Wolfgang, Modjaz, Maryam 2021, ApJ, “Modeling Type Ic S...">
+
+.. only:: html
+
  .. figure:: /2020_examples/images/thumb/sphx_glr_plot_22d_thumb.png
      :alt: Williamson et al. (2020) Figure 2 t_explosion=22 days
 

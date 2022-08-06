@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Williamson et al. (2020) Figure 3 g He=0.05M⊙ &#8212; tardis-setups  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Williamson et al. (2020) Figure 3 g He=0.01M⊙" href="plot_22d_he_01.html" />
+    <link rel="prev" title="Williamson et al. (2020) Figure 3 g He=0.10M⊙" href="plot_22d_he_10.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-2020-examples-plot-22d-he-05-py"><span class="std std-ref">here</span></a>
+to download the full example code</p>
+</div>
+<section class="sphx-glr-example-title" id="williamson-et-al-2020-figure-3-g-he-0-05m">
+<span id="sphx-glr-2020-examples-plot-22d-he-05-py"></span><h1>Williamson et al. (2020) Figure 3 g He=0.05M⊙<a class="headerlink" href="#williamson-et-al-2020-figure-3-g-he-0-05m" title="Permalink to this heading">¶</a></h1>
+<p>Article: Williamson, Marc, Kerzendorf, Wolfgang, Modjaz, Maryam 2021, ApJ,
+“Modeling Type Ic Supernovae with TARDIS: Hidden Helium in SN 1994I?” (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2021ApJ...908..150W">ADS Link</a>).</p>
+<p>Original Input Files: <a class="reference external" href="https://github.com/tardis-sn/tardis-setups/blob/master/2020/2020_williamson_94I/he_setups/22d_he_05.yml">YAML</a>, <a class="reference external" href="https://github.com/tardis-sn/tardis-setups/blob/master/2020/2020_williamson_94I/he_setups/22d_He_0.05.csvy">CSVY</a></p>
+<p>Original Atomic Dataset: Data missing</p>
+<p>Original Spectra: Data missing</p>
+<p>Notes: Please note that the spectra obtained below is obtained by using a slightly
+modified configuration file. This is done to ensure that the spectra can be
+obtained using the computers hosted by us.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tardis</span> <span class="kn">import</span> <span class="n">run_tardis</span>
+<span class="kn">from</span> <span class="nn">tardis.io.config_reader</span> <span class="kn">import</span> <span class="n">Configuration</span>
+<span class="kn">from</span> <span class="nn">tardis.io.atom_data.util</span> <span class="kn">import</span> <span class="n">download_atom_data</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;../&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">setup_utils</span> <span class="kn">import</span> <span class="n">config_modifier</span>
+</pre></div>
+</div>
+<p>Uncomment this line if you need to download the dataset.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">download_atom_data</span><span class="p">(</span><span class="s2">&quot;kurucz_cd23_chianti_H_He&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Runs the example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conf</span> <span class="o">=</span> <span class="n">Configuration</span><span class="o">.</span><span class="n">from_yaml</span><span class="p">(</span><span class="s2">&quot;../../2020/2020_williamson_94I/he_setups/22d_he_05.yml&quot;</span><span class="p">)</span>
+<span class="n">conf</span> <span class="o">=</span> <span class="n">config_modifier</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Config
+None
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sim</span> <span class="o">=</span> <span class="n">run_tardis</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span>
+
+
+<span class="n">spectrum</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">spectrum</span>
+<span class="n">spectrum_virtual</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">spectrum_virtual</span>
+<span class="n">spectrum_integrated</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">spectrum_integrated</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">))</span>
+
+<span class="n">spectrum</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Normal packets&quot;</span><span class="p">)</span>
+<span class="n">spectrum_virtual</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Virtual packets&quot;</span><span class="p">)</span>
+<span class="n">spectrum_integrated</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Formal integral&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">9000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;TARDIS example model spectrum&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Wavelength [$\AA$]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Luminosity density [erg/s/$\AA$]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../_images/sphx_glr_plot_22d_he_05_001.png" srcset="../_images/sphx_glr_plot_22d_he_05_001.png" alt="TARDIS example model spectrum" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: divide by zero encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/plasma/properties/radiative_properties.py:93: RuntimeWarning: invalid value encountered in true_divide
+  (g_lower * n_upper) / (g_upper * n_lower)
+/home/runner/work/tardis-setups/tardis-setups/tardis/tardis/montecarlo/montecarlo_numba/formal_integral.py:357: UserWarning: The number of interpolate_shells was not specified. The value was set to 80.
+  warnings.warn(
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 23 minutes  10.711 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-2020-examples-plot-22d-he-05-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/20c2fe2e0482946c6c2e398d06a2836e/plot_22d_he_05.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_22d_he_05.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/0dd766a9cc16acf321c07978730b9a42/plot_22d_he_05.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_22d_he_05.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">tardis-setups</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Galleries:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Year 2020 Results</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="plot_22d_he_10.html">Williamson et al. (2020) Figure 3 g He=0.10M⊙</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Williamson et al. (2020) Figure 3 g He=0.05M⊙</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_22d_he_01.html">Williamson et al. (2020) Figure 3 g He=0.01M⊙</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_22d.html">Williamson et al. (2020) Figure 2 t_explosion=22 days</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_30d.html">Williamson et al. (2020) Figure 2 t_explosion=30 days</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_16d.html">Williamson et al. (2020) Figure 2 t_explosion=16 days</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_40d.html">Williamson et al. (2020) Figure 2 t_explosion=40 days</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Year 2020 Results</a><ul>
+      <li>Previous: <a href="plot_22d_he_10.html" title="previous chapter">Williamson et al. (2020) Figure 3 g He=0.10M⊙</a></li>
+      <li>Next: <a href="plot_22d_he_01.html" title="next chapter">Williamson et al. (2020) Figure 3 g He=0.01M⊙</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Wolfgang Kerzendorf.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/2020_examples/plot_22d_he_05.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
