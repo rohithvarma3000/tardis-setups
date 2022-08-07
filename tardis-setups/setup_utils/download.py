@@ -17,6 +17,10 @@ def download_from_url(url):
         fname = url.split("/")[-1].split("?")[0]
 
     file_path = os.path.join(os.path.expanduser("~"), "Downloads", "tardis-data", fname)
+    try:
+        open(file_path, "x")
+    except FileNotFoundError:
+        pass
     open(file_path, "wb").write(r.content)
 
     return file_path
